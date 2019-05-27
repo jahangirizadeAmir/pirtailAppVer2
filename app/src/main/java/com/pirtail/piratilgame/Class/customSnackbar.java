@@ -1,12 +1,10 @@
 package com.pirtail.piratilgame.Class;
 
 import android.content.Context;
-import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.widget.TextView;
-
-import com.pirtail.piratilgame.*;
+import com.pirtail.piratilgame.R;
 
 /**
  * Created by piratil on 5/8/2019.
@@ -14,24 +12,23 @@ import com.pirtail.piratilgame.*;
 
 public class customSnackbar {
     String text;
-    CoordinatorLayout parent;
+    View parent;
     public static final int danger = 1;
     public static final int info = 2;
     public static final int succ = 3;
     public static final int alert = 4;
-
-    public Snackbar getSnackbar() {
-        return snackbar;
-    }
+    Snackbar show;
 
     Snackbar snackbar;
     Context Context;
-    public customSnackbar(String text, CoordinatorLayout parent,Context context,int model) {
+    public customSnackbar(String text,View Parent,Context context,int model) {
+
+        Snackbar.make(parent, "Message", Snackbar.LENGTH_LONG).show();
+
         this.text = text;
         this.parent = parent;
         this.Context = context;
 
-        snackbar = Snackbar.make(parent, text, Snackbar.LENGTH_INDEFINITE);
 
         final View snackBarView = snackbar.getView();
 
