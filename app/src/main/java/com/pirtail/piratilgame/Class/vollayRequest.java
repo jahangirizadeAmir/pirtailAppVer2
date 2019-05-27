@@ -2,6 +2,7 @@ package com.pirtail.piratilgame.Class;
 
 import android.content.Context;
 
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -10,11 +11,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.pirtail.piratilgame.*;
-import com.pirtail.piratilgame.versionController;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.lang.ref.ReferenceQueue;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
