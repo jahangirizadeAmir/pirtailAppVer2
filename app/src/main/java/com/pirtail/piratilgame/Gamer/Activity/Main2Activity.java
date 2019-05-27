@@ -104,10 +104,12 @@ public class Main2Activity extends AppCompatActivity {
                                             builder.show();
                                         }else {
 
+                                            //Server error message
                                             if (jsonObject.getBoolean("error")){
                                                 customToast = new CustomToast(getApplicationContext(), jsonObject.getString("MSG"), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Bottom);
                                                 customToast.getToast().show();
                                             }else {
+                                                //Required server information from the user
                                                 sharedPreferences = getSharedPreferences("token", MODE_PRIVATE);
                                                 sharedPreferences.edit().putBoolean("login", true).apply();
                                                 sharedPreferences.edit().putString("token", token).apply();
@@ -133,7 +135,7 @@ public class Main2Activity extends AppCompatActivity {
                     }
                     ){
 
-
+                        //Required server information from the user
                         @Override
                         protected Map<String, String> getParams() throws AuthFailureError {
                             stringStringHashMap = new HashMap<>();
@@ -182,6 +184,7 @@ public class Main2Activity extends AppCompatActivity {
         mobile = sharedPreferences.getString("mobile", null);
     }
 
+    //encrypting token
     protected String getSaltString() {
         String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
         StringBuilder salt = new StringBuilder();
