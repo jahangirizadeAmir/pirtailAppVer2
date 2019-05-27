@@ -14,7 +14,7 @@ import com.pirtail.piratilgame.*;
  * Created by piratil on 5/8/2019.
  */
 
-public class customToast {
+public class CustomToast {
     Context context;
     public static final int danger = 1;
     public static final int info = 2;
@@ -34,7 +34,7 @@ public class customToast {
     }
 
     Toast toast;
-    public customToast(Context context, String text,int modelToast,int position) {
+    public CustomToast(Context context, String text, int modelToast, int position) {
         this.context = context;
         Text = text;
          toast = new Toast(context);

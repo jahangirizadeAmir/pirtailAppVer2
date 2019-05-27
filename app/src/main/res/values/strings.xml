@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">PiratilGame</string>
+    <string name="emptyNameFamilyError">نام و نام خانوادگی وارد نشده است</string>
+    <string name="incompatiblePhoneNUmber">"شماره موبایل معرف به درستی وارد نشده است"</string>
+    <string name="emptyGender">"جنسیت انتخاب نشده است!"</string>
+
 </resources>
