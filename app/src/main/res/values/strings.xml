@@ -1,10 +1,13 @@
 <resources>
     <string name="app_name">PiratilGame</string>
-    <string name="emptyNameFamilyError">نام و نام خانوادگی وارد نشده است</string>
-    <string name="incompatiblePhoneNUmber">"شماره موبایل معرف به درستی وارد نشده است"</string>
-    <string name="incompatibleRegenantPhoneNUmber">"شماره موبایل به درستی وارد نشده است"</string>
-    <string name="emptyGender">"جنسیت انتخاب نشده است!"</string>
-    <string name="wrongReagentPhoneNumber">"ثبت نام کننده نمی‌تواند معرف خود باشد!!"</string>
-    <string name="please_wait">لطفا منتظر باشید...</string>
+    <string name="emptyNameFamilyERROR">نام و نام خانوادگی وارد نشده است</string>
+    <string name="incompatiblePhoneNUmberERROR">شماره موبایل معرف به درستی وارد نشده است</string>
+    <string name="incompatibleRegenantPhoneNUmberERROR">شماره موبایل به درستی وارد نشده است</string>
+    <string name="emptyGenderERROR">"جنسیت انتخاب نشده است!"</string>
+    <string name="wrongReagentPhoneNumberERROR">ثبت نام کننده نمی‌تواند معرف خود باشد!!</string>
+    <string name="please_wait">لطفا منتظر باشید…</string>
+    <string name="emptyConformationCodeERROR">کد وارد نشده است</string>
+    <string name="MSG_ERROR">MSG</string>
+    <string name="resendingConformationCodeSuccess">ارسال مجدد کد با موفقیت انجام شد</string>
 
 </resources>

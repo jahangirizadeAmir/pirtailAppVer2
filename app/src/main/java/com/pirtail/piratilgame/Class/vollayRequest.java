@@ -33,11 +33,11 @@ public class vollayRequest {
 
 
     public void requester(final HashMap<String, String> stringStringHashMap,
-                          final Context context, final String mehtod,
+                          final Context context, final String method,
                           final ServerCallback serverCallback) {
         this.stringStringHashMap = stringStringHashMap;
         this.context = context;
-        this.url = mehtod;
+        this.url = method;
         this.serverCallback = serverCallback;
         requestQueue = Volley.newRequestQueue(context);
 
@@ -67,7 +67,7 @@ public class vollayRequest {
             protected Map<String, String> getParams() throws AuthFailureError {
                 stringStringHashMap.put("appVersion", "1");
                 stringStringHashMap.put("device", "android");
-                stringStringHashMap.put("method", mehtod);
+                stringStringHashMap.put("method", method);
                 return stringStringHashMap;
             }
         };

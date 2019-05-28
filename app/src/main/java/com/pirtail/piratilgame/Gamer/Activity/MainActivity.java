@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 userPhoneNumber=edt_phone_number.getText().toString().trim();
 
                 if (userPhoneNumber.equals("") || userPhoneNumber.length() < 11 || userPhoneNumber.length() > 11){
-                    customToast = new CustomToast(getApplicationContext(), getResources().getString(R.string.incompatibleRegenantPhoneNUmber), CustomToast.info, CustomToast.Bottom);
+                    customToast = new CustomToast(getApplicationContext(), getResources().getString(R.string.incompatibleRegenantPhoneNUmberERROR), CustomToast.info, CustomToast.Bottom);
                     customToast.getToast().show();
                 }else {
 

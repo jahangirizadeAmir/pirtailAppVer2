@@ -62,26 +62,26 @@ public class Main3Activity extends AppCompatActivity {
 
                 // Empty the name and family ERROR
                 if (nameFamily.equals("")){
-                    customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.emptyNameFamilyError), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
+                    customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.emptyNameFamilyERROR), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
                     customToast.getToast().show();
                 }
 
 
                 // Empty gender ERROR
                 if (!rbtn_men.isChecked() && !rbtn_women.isChecked()){
-                    customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.emptyGender), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
+                    customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.emptyGenderERROR), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
                     customToast.getToast().show();
                 }
 
                 //  Empty Reagent phone number ERROR
                 if (regenantPhoneNumber.equals("") && regenantPhoneNumber.length()<11 && regenantPhoneNumber.length()>11){
-                    customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.incompatiblePhoneNUmber), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
+                    customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.incompatiblePhoneNUmberERROR), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
                     customToast.getToast().show();
                 }
 
                 //similarity regnant phone number with user phone number ERROR
                 if (reagent_phone_number.getText().toString().trim().equals(mobile)){
-                    customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.wrongReagentPhoneNumber), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
+                    customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.wrongReagentPhoneNumberERROR), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
                     customToast.getToast().show();
                 }
                 else {
@@ -106,7 +106,7 @@ public class Main3Activity extends AppCompatActivity {
 
                                             //Server error message
                                             if (jsonObject.getBoolean("error")){
-                                                customToast = new CustomToast(getApplicationContext(), jsonObject.getString("MSG"), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Bottom);
+                                                customToast = new CustomToast(getApplicationContext(), jsonObject.getString(getResources().getString(R.string.MSG_ERROR)), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Bottom);
                                                 customToast.getToast().show();
                                             }else {
                                                 //Required server information from the user
