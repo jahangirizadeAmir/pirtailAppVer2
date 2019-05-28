@@ -33,17 +33,17 @@ public class vollayRequest {
 
 
     public void requester(final HashMap<String, String> stringStringHashMap,
-                          final Context context, String url,
+                          final Context context, final String mehtod,
                           final ServerCallback serverCallback) {
         this.stringStringHashMap = stringStringHashMap;
         this.context = context;
-        this.url = url;
+        this.url = mehtod;
         this.serverCallback = serverCallback;
         requestQueue = Volley.newRequestQueue(context);
 
         StringRequest stringRequest = new StringRequest(
                 Request.Method.POST,
-                "http://piratil.com/game/request/" + url,
+                "http://piratil.com/game/method/method.php",
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -67,6 +67,7 @@ public class vollayRequest {
             protected Map<String, String> getParams() throws AuthFailureError {
                 stringStringHashMap.put("appVersion", "1");
                 stringStringHashMap.put("device", "android");
+                stringStringHashMap.put("method", mehtod);
                 return stringStringHashMap;
             }
         };

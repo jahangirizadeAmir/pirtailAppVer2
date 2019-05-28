@@ -1,9 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    android:background="@drawable/ic_white_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Gamer.Activity.Main2Activity">
+    tools:context=".Gamer.Activity.Main2Activity"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_piratil_logo"
+                android:layout_width="match_parent"
+                android:paddingTop="1dp"
+                android:paddingBottom="60dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_logo" />
+
+            <LinearLayout
+                android:layout_marginTop="80dp"
+                android:orientation="vertical"
+                android:padding="40dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edt_conformation_code"
+                    android:hint="کد ارسال شده را وارد کنید..."
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:background="@drawable/white_rectangular_box"
+                    android:layout_marginBottom="20dp" />
+
+                <Button
+                    android:id="@+id/btn_send"
+                    android:background="@drawable/green_rectangular_box"
+                    android:layout_width="wrap_content"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_height="100dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="تایید"
+                    android:textColor="#FFF"
+                    android:padding="30dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="00:00"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

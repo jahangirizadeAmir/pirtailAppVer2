@@ -1,5 +1,6 @@
 package com.pirtail.piratilgame.Gamer.Activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AlertDialog;
@@ -27,13 +28,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class Main2Activity extends AppCompatActivity {
+
+public class Main3Activity extends AppCompatActivity {
 
     EditText edt_username, edt_phone_number, edt_name_family, reagent_phone_number;
     RadioButton rbtn_men, rbtn_women;
     Button btn_send;
-    String username, UserPhoneNumber,reagent , nameFamily, gender, token, mobile;
+    String username, regenantPhoneNumber,reagent , nameFamily, gender, token, mobile;
     StringRequest stringRequest;
     RequestQueue requestQueue;
     SharedPreferences sharedPreferences;
@@ -46,7 +49,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main3);
 
         defineObjects();
 
@@ -59,15 +62,10 @@ public class Main2Activity extends AppCompatActivity {
 
                 // Empty the name and family ERROR
                 if (nameFamily.equals("")){
-                    CustomToast customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.emptyNameFamilyError), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
+                    customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.emptyNameFamilyError), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
                     customToast.getToast().show();
                 }
 
-                // checked phoneNumber
-        /*if (UserPhoneNumber.equals("") && UserPhoneNumber.length()<11 && UserPhoneNumber.length()>11){
-            customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.incompatiblePhoneNUmber), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
-            customToast.getToast().show();
-        }*/
 
                 // Empty gender ERROR
                 if (!rbtn_men.isChecked() && !rbtn_women.isChecked()){
@@ -76,7 +74,7 @@ public class Main2Activity extends AppCompatActivity {
                 }
 
                 //  Empty Reagent phone number ERROR
-                if (UserPhoneNumber.equals("") && UserPhoneNumber.length()<11 && UserPhoneNumber.length()>11){
+                if (regenantPhoneNumber.equals("") && regenantPhoneNumber.length()<11 && regenantPhoneNumber.length()>11){
                     customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.incompatiblePhoneNUmber), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
                     customToast.getToast().show();
                 }
@@ -99,7 +97,7 @@ public class Main2Activity extends AppCompatActivity {
 
                                         //app version ERROR
                                         if (!jsonObject.getBoolean("version")) {
-                                            builder = new AlertDialog.Builder(Main2Activity.this);
+                                            builder = new AlertDialog.Builder(Main3Activity.this);
                                             builder.setTitle("خطایی پیش آمده");
                                             builder.setMessage("نسخه جدید را دانلود کنید");
                                             builder.setCancelable(false);
@@ -116,7 +114,7 @@ public class Main2Activity extends AppCompatActivity {
                                                 sharedPreferences.edit().putBoolean("login", true).apply();
                                                 sharedPreferences.edit().putString("token", token).apply();
                                                 sharedPreferences.edit().putString("mobile", mobile).apply();
-                                                intent = new Intent(Main2Activity.this, Main3Activity.class);
+                                                intent = new Intent(Main3Activity.this, Main4Activity.class);
                                                 startActivity(intent);
                                                 finish();
                                             }
@@ -165,16 +163,14 @@ public class Main2Activity extends AppCompatActivity {
     private void defineObjects() {
         edt_username=(EditText)findViewById(R.id.edt_username);
         edt_phone_number=(EditText)findViewById(R.id.edt_phone_number);
-        btn_send=(Button) findViewById(R.id.btn_send);
+        btn_send=(Button) findViewById(R.id.btn_conformation);
         reagent_phone_number=(EditText)findViewById(R.id.reagent_phone_number);
         edt_name_family=(EditText)findViewById(R.id.edt_name_family);
         rbtn_men=(RadioButton) findViewById(R.id.rbtn_men);
         rbtn_women=(RadioButton) findViewById(R.id.rbtn_women);
 
         username = edt_username.getText().toString().trim();
-/*
-        UserPhoneNumber = edt_phone_number.getText().toString().trim();
-*/
+        regenantPhoneNumber = reagent_phone_number.getText().toString().trim();
         reagent = reagent_phone_number.getText().toString().trim();
         nameFamily = edt_name_family.getText().toString().trim();
         if (rbtn_men.isChecked()){
@@ -200,6 +196,11 @@ public class Main2Activity extends AppCompatActivity {
         String saltStr = salt.toString();
         return saltStr;
 
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
 }

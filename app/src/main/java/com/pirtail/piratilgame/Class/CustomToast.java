@@ -56,7 +56,7 @@ public class CustomToast {
                 toast.setGravity(0,0,-500);
                 break;
             case Bottom:
-                toast.setGravity(0,0,500);
+                toast.setGravity(0,0,1150);
                 break;
 
 

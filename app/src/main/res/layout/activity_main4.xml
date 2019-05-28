@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Gamer.Activity.Main3Activity"
+    tools:context=".Gamer.Activity.Main4Activity"
     android:background="@drawable/map_bg"
     android:orientation="vertical">
 
@@ -103,7 +103,6 @@
         android:paddingBottom="50dp">
 
         <Button
-            android:id="@+id/btn_send"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:background="@drawable/green_rectangular_box"
