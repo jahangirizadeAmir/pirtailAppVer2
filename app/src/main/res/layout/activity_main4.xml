@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Gamer.Activity.Main3Activity"
+    android:background="@drawable/map_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/img_user_info"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="-40dp"
+            android:layout_marginRight="-40dp"
+            android:src="@drawable/user_info_preview_box" />
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="106dp"
+            android:layout_marginLeft="106dp"
+            android:layout_marginTop="81dp"
+            android:layout_marginEnd="166dp"
+            android:layout_marginRight="166dp"
+            android:layout_marginBottom="70dp"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="username"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_user_ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_alignEnd="@+id/img_user_info"
+            android:layout_alignRight="@+id/img_user_info"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="167dp"
+            android:layout_marginLeft="167dp"
+            android:layout_marginTop="119dp"
+            android:layout_marginEnd="166dp"
+            android:layout_marginRight="166dp"
+            android:layout_marginBottom="45dp"
+            android:gravity="center"
+            android:text="150"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="50dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/red_circular_box"
+            android:gravity="center"
+            android:text="چالش هفتگی"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingEnd="30dp"
+        android:paddingStart="30dp"
+        android:paddingBottom="50dp">
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:background="@drawable/green_rectangular_box"
+            android:text="جستجوی الماس"
+            android:textColor="#FFF"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
