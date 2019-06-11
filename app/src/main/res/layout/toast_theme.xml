@@ -24,7 +24,7 @@
             android:id="@+id/imgAlert"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/ic_info" />
+            app:srcCompat="@drawable/ic_info" />
 
         <TextView
             android:id="@+id/textAlert"

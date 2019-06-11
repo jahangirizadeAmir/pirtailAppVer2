@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,7 +14,7 @@
         android:layout_weight="1">
 
         <ImageView
-            android:id="@+id/img_user_info"
+            android:id="@+id/frame_user_info"
             android:layout_width="wrap_content"
             android:layout_height="250dp"
             android:layout_alignParentStart="true"
@@ -25,26 +26,44 @@
             android:layout_marginStart="40dp"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="20dp"
-            android:layout_marginEnd="-40dp"
-            android:layout_marginRight="-40dp"
-            android:src="@drawable/user_info_preview_box" />
+            android:layout_marginEnd="-10dp"
+            android:layout_marginRight="-10dp"
+            android:src="@drawable/green_frame_user_info" />
 
-        <TextView
-            android:id="@+id/txt_username"
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
+        <ImageView
+            android:id="@+id/img_user_character"
+            android:layout_width="140dp"
+            android:layout_height="230dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="106dp"
-            android:layout_marginLeft="106dp"
-            android:layout_marginTop="81dp"
-            android:layout_marginEnd="166dp"
-            android:layout_marginRight="166dp"
-            android:layout_marginBottom="70dp"
+            android:layout_marginStart="265dp"
+            android:layout_marginLeft="265dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="44dp"
+            android:layout_marginRight="44dp"
+            android:layout_marginBottom="38dp"
+            app:srcCompat="@drawable/ic_user_charracter" />
+
+        <TextView
+            android:id="@+id/txt_username"
+            android:layout_width="150dp"
+            android:layout_height="31dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="73dp"
+            android:layout_marginLeft="73dp"
+            android:layout_marginTop="69dp"
+            android:layout_marginEnd="188dp"
+            android:layout_marginRight="188dp"
+            android:layout_marginBottom="83dp"
             android:gravity="center"
             android:marqueeRepeatLimit="marquee_forever"
             android:text="username"
@@ -54,20 +73,20 @@
             android:id="@+id/txt_user_ranking"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
-            android:layout_alignEnd="@+id/img_user_info"
-            android:layout_alignRight="@+id/img_user_info"
+            android:layout_alignEnd="@+id/frame_user_info"
+            android:layout_alignRight="@+id/frame_user_info"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="167dp"
-            android:layout_marginLeft="167dp"
-            android:layout_marginTop="119dp"
-            android:layout_marginEnd="166dp"
-            android:layout_marginRight="166dp"
-            android:layout_marginBottom="45dp"
+            android:layout_marginStart="147dp"
+            android:layout_marginLeft="147dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="186dp"
+            android:layout_marginRight="186dp"
+            android:layout_marginBottom="54dp"
             android:gravity="center"
             android:text="150"
             android:textSize="14sp" />
@@ -81,7 +100,8 @@
         android:padding="50dp"
         android:gravity="center">
 
-        <TextView
+        <Button
+            android:id="@+id/btn_challenge"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:background="@drawable/red_circular_box"
@@ -103,6 +123,7 @@
         android:paddingBottom="50dp">
 
         <Button
+            android:id="@+id/btn_find_diamond"
             android:layout_width="wrap_content"
             android:layout_height="100dp"
             android:background="@drawable/green_rectangular_box"

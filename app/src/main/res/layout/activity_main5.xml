@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Gamer.Activity.Main5Activity">
 
+    <fragment
+        android:name="com.pirtail.piratilgame.Gamer.Fragment.FragBowling"
+        android:id="@+id/bowoling_frag"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
 </android.support.constraint.ConstraintLayout>
