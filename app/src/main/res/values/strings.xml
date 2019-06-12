@@ -9,5 +9,10 @@
     <string name="emptyConformationCodeERROR">کد وارد نشده است</string>
     <string name="MSG_ERROR">MSG</string>
     <string name="resendingConformationCodeSuccess">ارسال مجدد کد با موفقیت انجام شد</string>
+    <string name="username">S username</string>
+    <string name="user_rank">000</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

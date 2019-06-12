@@ -4,10 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="0sp"
-    android:layout_margin="0sp"
-    tools:context=".Gamer.Activity.Main5Activity"
-    android:orientation="vertical">
+    tools:context=".Gamer.Activity.View_pager">
 
+    <android.support.v4.view.ViewPager
+        android:id="@+id/ViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>
