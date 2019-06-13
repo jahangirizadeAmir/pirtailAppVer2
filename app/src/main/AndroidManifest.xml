@@ -18,22 +18,21 @@
         tools:ignore="GoogleAppIndexingWarning"
         android:screenOrientation="portrait" >
         <activity android:name=".Gamer.Activity.Main5Activity"></activity>
-        <activity android:name=".Gamer.Activity.Main2Activity" />
+        <activity android:name=".Gamer.Activity.EnterCode" />
         <activity android:name=".Gamer.Activity.View_pager" />
-        <activity android:name=".Gamer.Activity.Main4Activity"
-            android:screenOrientation="portrait"
-
-            >
+        <activity android:name=".Gamer.Activity.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Gamer.Activity.Main3Activity" />
+        <activity android:name=".Gamer.Activity.Register" />
         <activity
-            android:name=".Gamer.Activity.MainActivity"
+            android:name=".Gamer.Activity.PhoneEnter"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+
 
         </activity>
 

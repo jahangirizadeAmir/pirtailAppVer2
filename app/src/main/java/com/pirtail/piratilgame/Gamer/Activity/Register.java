@@ -31,7 +31,7 @@ import java.util.Random;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
-public class Main3Activity extends AppCompatActivity {
+public class Register extends AppCompatActivity {
 
     EditText edt_username, edt_phone_number, edt_name_family, reagent_phone_number;
     RadioButton rbtn_men, rbtn_women;
@@ -49,7 +49,7 @@ public class Main3Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.register);
 
         defineObjects();
 
@@ -97,7 +97,7 @@ public class Main3Activity extends AppCompatActivity {
 
                                         //app version ERROR
                                         if (!jsonObject.getBoolean("version")) {
-                                            builder = new AlertDialog.Builder(Main3Activity.this);
+                                            builder = new AlertDialog.Builder(Register.this);
                                             builder.setTitle("خطایی پیش آمده");
                                             builder.setMessage("نسخه جدید را دانلود کنید");
                                             builder.setCancelable(false);
@@ -114,7 +114,7 @@ public class Main3Activity extends AppCompatActivity {
                                                 sharedPreferences.edit().putBoolean("login", true).apply();
                                                 sharedPreferences.edit().putString("token", token).apply();
                                                 sharedPreferences.edit().putString("mobile", mobile).apply();
-                                                intent = new Intent(Main3Activity.this, Main4Activity.class);
+                                                intent = new Intent(Register.this, MainActivity.class);
                                                 startActivity(intent);
                                                 finish();
                                             }

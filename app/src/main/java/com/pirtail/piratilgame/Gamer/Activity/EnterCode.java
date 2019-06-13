@@ -35,7 +35,7 @@ import java.util.concurrent.TimeUnit;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class Main2Activity extends AppCompatActivity {
+public class EnterCode extends AppCompatActivity {
 
     Button btn_send;
     EditText edt_conformation_code;
@@ -56,12 +56,12 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.code_enter);
 
         defineObjects();
 
-        //  get the static data from MainActivity
-        requestQueue = Volley.newRequestQueue(Main2Activity.this);
+        //  get the static data from PhoneEnter
+        requestQueue = Volley.newRequestQueue(EnterCode.this);
         intent=getIntent();
         submit=intent.getBooleanExtra("submit", true);
         dataComplete=intent.getBooleanExtra("dataComplete", false);
@@ -86,13 +86,13 @@ public class Main2Activity extends AppCompatActivity {
                     stringStringHashMap.put("code", conformationCode);
 
                     //Server error message
-                    progressDialog = new ProgressDialog(Main2Activity.this);
+                    progressDialog = new ProgressDialog(EnterCode.this);
                     progressDialog.setMessage(getResources().getString(R.string.please_wait));
                     progressDialog.setCancelable(false);
                     progressDialog.show();
 
                     vollay_Request= new vollayRequest();
-                    vollay_Request.requester(stringStringHashMap, Main2Activity.this, "checkCode.php", new ServerCallback() {
+                    vollay_Request.requester(stringStringHashMap, EnterCode.this, "checkCode.php", new ServerCallback() {
                         @Override
                         public void onSuccess(JSONObject result) throws JSONException {
                             progressDialog.dismiss();
@@ -103,7 +103,7 @@ public class Main2Activity extends AppCompatActivity {
                                 sharedPreferences = getSharedPreferences("Token", MODE_PRIVATE);
                                 sharedPreferences.edit().putString("mobile",mobile).apply();
                                 sharedPreferences.edit().putString("token",result.getString("token")).apply();
-                                intent = new Intent(Main2Activity.this, Main3Activity.class);
+                                intent = new Intent(EnterCode.this, Register.class);
                                 startActivity(intent);
                                 finish();
 
@@ -138,7 +138,7 @@ public class Main2Activity extends AppCompatActivity {
                     public void onClick(View v) {
                         countDownTimer.start();
                         txt_resend_code.setTextColor(getResources().getColor(R.color.link_color_disable));
-                        final ProgressDialog progressDialog = new ProgressDialog(Main2Activity.this);
+                        final ProgressDialog progressDialog = new ProgressDialog(EnterCode.this);
                         progressDialog.setMessage(getResources().getString(R.string.please_wait));
                         progressDialog.setCancelable(false);
                         progressDialog.show();
@@ -155,7 +155,7 @@ public class Main2Activity extends AppCompatActivity {
                                         try {
                                             jsonObject = new JSONObject(response);
                                             if (!jsonObject.getBoolean("version")) {
-                                                AlertDialog.Builder builder = new AlertDialog.Builder(Main2Activity.this);
+                                                AlertDialog.Builder builder = new AlertDialog.Builder(EnterCode.this);
                                                 builder.setTitle("خطایی پیش آمده");
                                                 builder.setMessage("نسخه جدید را دانلود کنید");
                                                 builder.setCancelable(false);
