@@ -10,57 +10,46 @@ import android.widget.TextView;
 
 import com.pirtail.piratilgame.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView img_challenge, img_search, ic_cup, ic_menu;
-    TextView txt_username, txt_user_ranking;
+    @BindView(R.id.img_challenge)
+    ImageView img_challenge;
+
+    @BindView(R.id.img_search)
+    ImageView img_search;
+
+    @BindView(R.id.ic_cup)
+    ImageView ic_cup;
+
+    @BindView(R.id.ic_menu)
+    ImageView ic_menu;
+
+    @BindView(R.id.txt_username)
+    TextView txt_username;
+
+    @BindView(R.id.txt_user_ranking)
+    TextView txt_user_ranking;
+
     Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
+
         defineObjects();
-
-        img_challenge.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(MainActivity.this, View_pager.class);
-                startActivity(intent);
-//                finish();
-            }
-        });
-
-        img_search.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent= new Intent(MainActivity.this, MapActivity.class);
-                startActivity(intent);
-//                finish();
-            }
-        });
-
-
-
 
     }
 
     private void defineObjects() {
-        txt_username=(TextView) findViewById(R.id.txt_username);
-        txt_user_ranking=(TextView) findViewById(R.id.txt_user_ranking);
-
-        img_challenge=(ImageView) findViewById(R.id.img_challenge);
         img_challenge.setOnClickListener(this);
-
-        img_search=(ImageView) findViewById(R.id.img_search);
         img_search.setOnClickListener(this);
-
-        ic_cup=(ImageView) findViewById(R.id.ic_cup);
         ic_cup.setOnClickListener(this);
-
-        ic_menu=(ImageView) findViewById(R.id.ic_menu);
         ic_menu.setOnClickListener(this);
 
     }

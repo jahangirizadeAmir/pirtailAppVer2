@@ -25,7 +25,7 @@
             android:name=".Gamer.Activity.MapActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Gamer.Activity.EnterCode"
+            android:name=".Gamer.Activity.EnterCodeActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Gamer.Activity.View_pager"
@@ -33,11 +33,13 @@
         <activity
             android:name=".Gamer.Activity.MainActivity"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".Gamer.Activity.Register"
@@ -46,6 +48,7 @@
             android:name=".Gamer.Activity.PhoneEnter"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+
     </application>
 
 </manifest>

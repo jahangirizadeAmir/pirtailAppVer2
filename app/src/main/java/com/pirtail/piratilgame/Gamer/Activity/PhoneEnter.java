@@ -64,7 +64,7 @@ public class PhoneEnter extends AppCompatActivity {
                         public void onSuccess(JSONObject result) {
                             progressDialog.dismiss();
                             try {
-                                intent = new Intent(PhoneEnter.this, EnterCode.class);
+                                intent = new Intent(PhoneEnter.this, EnterCodeActivity.class);
                                 intent.putExtra("mobile",edt_phone_number.getText().toString().trim());
                                 intent.putExtra("type",result.getString("type"));
                                 startActivity(intent);
