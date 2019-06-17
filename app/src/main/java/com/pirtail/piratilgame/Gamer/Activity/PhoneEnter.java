@@ -19,12 +19,14 @@ import org.json.JSONObject;
 
 import java.util.HashMap;
 
+import butterknife.BindView;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class PhoneEnter extends AppCompatActivity {
 
+    @BindView(R.id.edt_phone_number)
+            EditText getEdt_phone_number;
 
-    EditText edt_phone_number;
     Button btn_conformation;
     String userPhoneNumber;
     CustomToast customToast;
@@ -44,7 +46,7 @@ public class PhoneEnter extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                userPhoneNumber=edt_phone_number.getText().toString().trim();
+                userPhoneNumber= getEdt_phone_number.getText().toString().trim();
 
                 if (userPhoneNumber.equals("") || userPhoneNumber.length() < 11 || userPhoneNumber.length() > 11){
                     customToast = new CustomToast(getApplicationContext(), getResources().getString(R.string.incompatibleRegenantPhoneNUmberERROR), CustomToast.info, CustomToast.Bottom);
@@ -65,7 +67,7 @@ public class PhoneEnter extends AppCompatActivity {
                             progressDialog.dismiss();
                             try {
                                 intent = new Intent(PhoneEnter.this, EnterCodeActivity.class);
-                                intent.putExtra("mobile",edt_phone_number.getText().toString().trim());
+                                intent.putExtra("mobile", getEdt_phone_number.getText().toString().trim());
                                 intent.putExtra("type",result.getString("type"));
                                 startActivity(intent);
                                 finish();
@@ -84,7 +86,6 @@ public class PhoneEnter extends AppCompatActivity {
     }
 
     private void defineObjects() {
-        edt_phone_number=(EditText)findViewById(R.id.edt_phone_number);
         btn_conformation=(Button)findViewById(R.id.btn_conformation);
 
     }

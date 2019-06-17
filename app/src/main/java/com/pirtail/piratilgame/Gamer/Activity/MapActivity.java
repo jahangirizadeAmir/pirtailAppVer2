@@ -9,34 +9,30 @@ import com.mapbox.mapboxsdk.constants.Style;
 import com.mapbox.mapboxsdk.maps.MapView;
 import com.pirtail.piratilgame.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MapActivity extends AppCompatActivity {
 
-    private MapView mapView;
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        mapView.onSaveInstanceState(outState);
-    }
+    @BindView(R.id.mapView)
+            MapView mapView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Mapbox.getInstance(this, "pk.eyJ1IjoiZGFsaXJlemEiLCJhIjoiY2p3eDlub3B2MTJvYzQxbW9jMTdyaGNjcCJ9.oH-jhRGdnAgbJbSw7rEp-Q");
         setContentView(R.layout.activity_map);
-        DefineObjects();
+        ButterKnife.bind(this);
+        defineObjects();
 
         mapView.onCreate(savedInstanceState);
         mapView.setStyleUrl(Style.MAPBOX_STREETS);
 
-//        ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION);
-//        ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_NETWORK_STATE);
+
     }
 
-    private void DefineObjects() {
-        mapView= (MapView)findViewById(R.id.mapView);
+    private void defineObjects() {
 
     }
 
