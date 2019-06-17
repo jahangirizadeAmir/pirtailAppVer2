@@ -4,23 +4,34 @@
     package="com.pirtail.piratilgame">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
+        android:name=".Class.Font"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".Class.Font"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="false"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="stateHidden|adjustPan"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:screenOrientation="portrait" >
-        <activity android:name=".Gamer.Activity.Main5Activity"></activity>
-        <activity android:name=".Gamer.Activity.EnterCode" />
-        <activity android:name=".Gamer.Activity.View_pager" />
-        <activity android:name=".Gamer.Activity.MainActivity"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".Gamer.Activity.ProfileActivity"></activity>
+        <activity android:name=".Gamer.Activity.RankingActivity" />
+        <activity android:name=".Gamer.Activity.MenuActivity" />
+        <activity
+            android:name=".Gamer.Activity.MapActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Gamer.Activity.EnterCode"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Gamer.Activity.View_pager"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Gamer.Activity.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,14 +39,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Gamer.Activity.Register" />
+        <activity
+            android:name=".Gamer.Activity.Register"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".Gamer.Activity.PhoneEnter"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
-
-
-        </activity>
-
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
     </application>
 
 </manifest>

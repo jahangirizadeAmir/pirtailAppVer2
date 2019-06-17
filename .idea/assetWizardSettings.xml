@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -14,8 +19,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="green_bg" />
-                            <entry key="sourceFile" value="$PROJECT_DIR$/../../UI/New Ui/NS/SVG/Artboard.svg" />
+                            <entry key="height" value="1921" />
+                            <entry key="outputName" value="ic_menu_bg2" />
+                            <entry key="overrideSize" value="true" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/../../UI/New Ui/NS/SVG/Menu_bg2.svg" />
+                            <entry key="width" value="1081" />
                           </map>
                         </option>
                       </PersistentState>

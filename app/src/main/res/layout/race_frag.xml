@@ -7,7 +7,8 @@
     android:padding="0sp"
     android:layout_margin="0sp"
     android:background="@drawable/green_bg"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".Gamer.Activity.View_pager">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -69,7 +70,7 @@
         android:layout_weight="2"
         android:gravity="center">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -108,7 +109,7 @@
                 app:layout_constraintTop_toTopOf="@+id/img_challenge"
                 app:layout_constraintVertical_bias="0.501" />
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
@@ -121,12 +122,12 @@
         android:paddingStart="30dp"
         android:paddingBottom="50dp">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/imageView"
+                android:id="@+id/img_search"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="8dp"
@@ -150,12 +151,12 @@
                 android:layout_marginBottom="8dp"
                 android:text="sample Entrance text"
                 android:textColor="#FFB600"
-                app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                app:layout_constraintEnd_toEndOf="@+id/imageView"
-                app:layout_constraintStart_toStartOf="@+id/imageView"
-                app:layout_constraintTop_toTopOf="@+id/imageView" />
+                app:layout_constraintBottom_toBottomOf="@+id/img_search"
+                app:layout_constraintEnd_toEndOf="@+id/img_search"
+                app:layout_constraintStart_toStartOf="@+id/img_search"
+                app:layout_constraintTop_toTopOf="@+id/img_search" />
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 

@@ -1,12 +1,12 @@
 package com.pirtail.piratilgame.Gamer.Activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.pirtail.piratilgame.Gamer.Fragment.FragRace;
 import com.pirtail.piratilgame.R;
@@ -23,7 +23,7 @@ public class View_pager extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.view_pager);
-        viewPager = findViewById(R.id.ViewPager);
+        viewPager = (ViewPager) findViewById(R.id.ViewPager);
         fragments = new ArrayList<>();
         fragments.add(FragRace.newInstance("GameOne","400",R.drawable.img_bowling_game,R.drawable.green_bg));
         fragments.add(FragRace.newInstance("GameOne","400",R.drawable.img_bowling_game,R.drawable.red_bg));

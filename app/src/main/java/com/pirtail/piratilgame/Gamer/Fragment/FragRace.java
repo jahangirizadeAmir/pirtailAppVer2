@@ -1,9 +1,9 @@
 package com.pirtail.piratilgame.Gamer.Fragment;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -45,13 +45,13 @@ public static FragRace newInstance(String title, String countGeml, int img, int 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.race_frag, null, false);
 
-        ImageView imageView = view.findViewById(R.id.img_challenge);
+        ImageView imageView = (ImageView) view.findViewById(R.id.img_challenge);
         imageView.setImageResource(Img);
 
-        TextView textView = view.findViewById(R.id.textChallenge);
+        TextView textView = (TextView)view.findViewById(R.id.textChallenge);
         textView.setText(Title);
 
-        TextView textView1 = view.findViewById(R.id.txt_Entrance);
+        TextView textView1 = (TextView)view.findViewById(R.id.txt_Entrance);
 
         textView1.setText(countGem);
 
