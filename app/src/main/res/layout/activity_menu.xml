@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_menu_bg2"
+    android:background="@drawable/simple_red_bg"
     tools:context=".Gamer.Activity.MenuActivity"
     android:orientation="vertical">
 

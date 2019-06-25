@@ -15,40 +15,50 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
         android:windowSoftInputMode="stateHidden|adjustPan"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Gamer.Activity.ProfileActivity"></activity>
-        <activity android:name=".Gamer.Activity.RankingActivity" />
-        <activity android:name=".Gamer.Activity.MenuActivity" />
+        <activity android:name=".Gamer.Activity.AboutUsActivity"></activity>
+        <activity android:name=".Gamer.Activity.SocialNetworksActivity" />
+        <activity android:name=".Gamer.Activity.ReportActivity" />
+        <activity android:name=".Gamer.Activity.SettingsActivity" />
         <activity
-            android:name=".Gamer.Activity.MapActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Gamer.Activity.EnterCodeActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Gamer.Activity.View_pager"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".Gamer.Activity.MainActivity"
-            android:screenOrientation="portrait">
-
+            android:name=".Gamer.Activity.ProfileActivity"
+            android:theme="@style/AppThemeRed">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
-            android:name=".Gamer.Activity.Register"
+            android:name=".Gamer.Activity.RankingActivity"
+            android:theme="@style/AppThemeOrange" />
+        <activity
+            android:name=".Gamer.Activity.MenuActivity"
+            android:theme="@style/AppThemeRed" />
+        <activity
+            android:name=".Gamer.Activity.MapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
+        <activity
+            android:name=".Gamer.Activity.EnterCodeActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".Gamer.Activity.View_pager"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeRed" />
+        <activity
+            android:name=".Gamer.Activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
+        <activity
+            android:name=".Gamer.Activity.Register"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
         <activity
             android:name=".Gamer.Activity.PhoneEnter"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
-
+            android:theme="@style/AppThemeWhite" />
     </application>
 
 </manifest>

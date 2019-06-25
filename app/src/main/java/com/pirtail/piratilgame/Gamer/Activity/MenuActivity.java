@@ -1,10 +1,11 @@
 package com.pirtail.piratilgame.Gamer.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.pirtail.piratilgame.R;
 
@@ -34,6 +35,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     @BindView(R.id.img_about_us)
     ImageView img_about_us;
 
+    Intent intent;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,10 +62,12 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.img_user_profile:
-                Toast.makeText(this, "img_user_profile", Toast.LENGTH_SHORT).show();
+                intent = new Intent(MenuActivity.this, ProfileActivity.class);
+                startActivity(intent);
                 break;
             case R.id.img_settings:
-
+                intent = new Intent(MenuActivity.this, RankingActivity.class);
+                startActivity(intent);
                 break;
             case R.id.img_report_bug:
 

@@ -5,215 +5,274 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/parent"
-    android:background="#FFF"
+    android:background="@drawable/simple_red_bg"
     tools:context=".Gamer.Activity.ProfileActivity">
-
-    <RelativeLayout
-        android:id="@+id/parent2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/map_bg"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:id="@+id/frame_user_info"
-                    android:layout_width="242dp"
-                    android:layout_height="100dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_gravity="end"
-                    android:layout_marginStart="105dp"
-                    android:layout_marginLeft="105dp"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginEnd="-3dp"
-                    android:layout_marginRight="-3dp"
-                    android:src="@drawable/yellow_frame"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.0" />
-
-                <TextView
-                    android:id="@+id/txt_username"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="bottom|end"
-                    android:layout_alignEnd="@+id/frame_user_info"
-                    android:layout_alignRight="@+id/frame_user_info"
-                    android:layout_alignBottom="@+id/frame_user_info"
-                    android:layout_marginEnd="123dp"
-                    android:layout_marginRight="125dp"
-                    android:layout_marginBottom="39dp"
-                    android:text="Alireza"
-                    android:textColor="@android:color/black" />
-
-                <TextView
-                    android:id="@+id/txt_user_ranking"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="bottom|end"
-                    android:layout_alignEnd="@+id/frame_user_info"
-                    android:layout_alignRight="@+id/frame_user_info"
-                    android:layout_alignBottom="@+id/frame_user_info"
-                    android:layout_marginEnd="134dp"
-                    android:layout_marginRight="134dp"
-                    android:layout_marginBottom="22dp"
-                    android:text="150"
-                    android:textColor="#fff"
-                    android:textSize="12sp" />
-
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="2"
-                android:gravity="center">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-
-                    <ImageView
-                        android:id="@+id/img_challenge"
-                        android:layout_width="0dp"
-                        android:layout_height="0dp"
-                        android:layout_marginStart="32dp"
-                        android:layout_marginLeft="32dp"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginEnd="32dp"
-                        android:layout_marginRight="32dp"
-                        android:layout_marginBottom="32dp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0"
-                        app:srcCompat="@drawable/red_circular_box" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="70dp"
-                        android:layout_marginLeft="70dp"
-                        android:layout_marginEnd="70dp"
-                        android:layout_marginRight="70dp"
-                        android:gravity="center"
-                        android:text="چالش هفتگی"
-                        android:textColor="@android:color/white"
-                        android:textColorLink="@android:color/white"
-                        android:textSize="25sp"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_challenge"
-                        app:layout_constraintEnd_toEndOf="@+id/img_challenge"
-                        app:layout_constraintStart_toStartOf="@+id/img_challenge"
-                        app:layout_constraintTop_toTopOf="@+id/img_challenge"
-                        app:layout_constraintVertical_bias="0.501" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_alignStart="@+id/parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingStart="30dp"
-                android:paddingEnd="30dp"
-                android:paddingBottom="50dp"
-                android:layout_alignLeft="@+id/parent">
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/img_search"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/green_rectangular_box"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/txt_find_dimound"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:gravity="center"
-                        android:text="جستجوی الماس"
-                        android:textColor="@android:color/white"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_search"
-                        app:layout_constraintEnd_toEndOf="@+id/img_search"
-                        app:layout_constraintStart_toStartOf="@+id/img_search"
-                        app:layout_constraintTop_toTopOf="@+id/img_search" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-    </RelativeLayout>
 
     <ImageView
         android:id="@+id/ic_menu"
         android:layout_width="37dp"
         android:layout_height="47dp"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="62dp"
-        android:paddingLeft="5dp"
+        android:layout_marginTop="14dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
         android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_menu" />
+        app:srcCompat="@drawable/ic_back" />
 
-    <ImageView
-        android:id="@+id/ic_cup"
-        android:layout_width="37dp"
-        android:layout_height="47dp"
-        android:layout_alignBottom="@+id/parent2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="187dp"
-        android:layout_marginLeft="187dp"
-        android:layout_marginTop="691dp"
-        android:layout_marginEnd="187dp"
-        android:layout_marginRight="187dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/back_cup_icon"
-        android:padding="6dp"
-        app:srcCompat="@drawable/ic_cup2" />
+    <LinearLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingRight="20dp"
+            android:paddingEnd="20dp"
+            android:paddingLeft="20dp"
+            android:paddingStart="20dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="40dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/green_rectangular_box"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="تغییر نام کاربری"
+                android:gravity="center" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5">
+
+            <ImageView
+                android:id="@+id/frame_user_info"
+                android:layout_width="242dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="-3dp"
+                android:layout_marginRight="-3dp"
+                android:src="@drawable/yellow_frame"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txt_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/frame_user_info"
+                android:layout_alignRight="@+id/frame_user_info"
+                android:layout_alignBottom="@+id/frame_user_info"
+                android:layout_marginEnd="123dp"
+                android:layout_marginRight="125dp"
+                android:layout_marginBottom="39dp"
+                android:text="@string/username"
+                android:textColor="#E01D59" />
+
+            <TextView
+                android:id="@+id/txt_user_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/frame_user_info"
+                android:layout_alignRight="@+id/frame_user_info"
+                android:textSize="12sp"
+                android:layout_alignBottom="@+id/frame_user_info"
+                android:layout_marginEnd="134dp"
+                android:layout_marginRight="134dp"
+                android:layout_marginBottom="22dp"
+                android:text="@string/user_rank"
+                android:textColor="#fff" />
+
+        </RelativeLayout>
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/frame_layout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingEnd="70dp"
+            android:paddingStart="70dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_rectangular_box"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="رمز عبور فعلی"
+                android:maxLines="1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingEnd="75dp"
+            android:paddingStart="75dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_rectangular_box"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="رمز جدید (حداقل ۶ کاراکتر)"
+                android:maxLines="1"
+                android:padding="3dp"
+                android:gravity="center"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingEnd="75dp"
+            android:paddingStart="75dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_rectangular_box"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="تکرار رمز جدید"
+                android:maxLines="1"
+                android:gravity="center"
+                android:padding="3dp"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingEnd="80dp"
+            android:paddingStart="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/green_rectangular_box"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="تغییر رمز"
+            android:gravity="center"
+            android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="بازیابی رمز عبور فقط از طریق ایمیل امکان پذیر است•  "
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:paddingEnd="50dp"
+            android:paddingStart="50dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/white_different_box" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="ایمیلت رو ثبت کن و الماس بگیر"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="#FF0000"
+                android:paddingRight="45dp"
+                android:paddingEnd="45dp"
+                android:paddingBottom="@dimen/margin_50"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:gravity="center"
+                android:paddingTop="30dp"
+                android:background="@android:color/transparent"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingEnd="80dp"
+            android:paddingStart="80dp"
+            android:layout_marginBottom="@dimen/margin_50"
+            android:layout_marginTop="15dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/green_rectangular_box" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="ثبت ایمیل"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>

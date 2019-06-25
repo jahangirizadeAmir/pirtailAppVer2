@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Gamer.Activity.RankingActivity">
+    tools:context=".Gamer.Activity.RankingActivity"
+    android:background="@drawable/simple_red_bg">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
