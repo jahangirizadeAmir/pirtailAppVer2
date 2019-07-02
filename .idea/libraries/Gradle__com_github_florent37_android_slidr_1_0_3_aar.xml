@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.florent37:android-slidr:1.0.3@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d631eda16303ba6f059ceced9cd30c54/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d631eda16303ba6f059ceced9cd30c54/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.florent37/android-slidr/1.0.3/620b54076b9a0ea95afa7c1c9f5bee006ad5039c/android-slidr-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

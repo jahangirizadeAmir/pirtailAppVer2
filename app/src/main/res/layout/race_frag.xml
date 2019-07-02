@@ -10,58 +10,58 @@
     android:orientation="vertical"
     tools:context=".Gamer.Activity.View_pager">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <ImageView
-            android:id="@+id/frame_user_info"
-            android:layout_width="242dp"
-            android:layout_height="100dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_gravity="end"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="-3dp"
-            android:layout_marginRight="-3dp"
-            android:src="@drawable/yellow_frame"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            <ImageView
+                android:id="@+id/frame_user_info"
+                android:layout_width="242dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="-3dp"
+                android:layout_marginRight="-3dp"
+                android:src="@drawable/red_frame"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/txt_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/frame_user_info"
-            android:layout_alignRight="@+id/frame_user_info"
-            android:layout_alignBottom="@+id/frame_user_info"
-            android:layout_marginEnd="123dp"
-            android:layout_marginRight="125dp"
-            android:layout_marginBottom="39dp"
-            android:text="@string/username"
-            android:textColor="#E01D59" />
+            <TextView
+                android:id="@+id/txt_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/frame_user_info"
+                android:layout_alignRight="@+id/frame_user_info"
+                android:layout_alignBottom="@+id/frame_user_info"
+                android:layout_marginEnd="123dp"
+                android:layout_marginRight="125dp"
+                android:layout_marginBottom="39dp"
+                android:text="@string/username"
+                android:textColor="#E01D59" />
 
-        <TextView
-            android:id="@+id/txt_user_ranking"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/frame_user_info"
-            android:layout_alignRight="@+id/frame_user_info"
-            android:textSize="12sp"
-            android:layout_alignBottom="@+id/frame_user_info"
-            android:layout_marginEnd="134dp"
-            android:layout_marginRight="134dp"
-            android:layout_marginBottom="22dp"
-            android:text="@string/user_rank"
-            android:textColor="#fff" />
+            <TextView
+                android:id="@+id/txt_user_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/frame_user_info"
+                android:layout_alignRight="@+id/frame_user_info"
+                android:textSize="12sp"
+                android:layout_alignBottom="@+id/frame_user_info"
+                android:layout_marginEnd="134dp"
+                android:layout_marginRight="134dp"
+                android:layout_marginBottom="22dp"
+                android:text="@string/user_rank"
+                android:textColor="#fff" />
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

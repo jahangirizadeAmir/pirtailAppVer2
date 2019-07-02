@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/parent"
     android:background="@drawable/simple_red_bg"
-    tools:context=".Gamer.Activity.SettingsActivity">
+    tools:context=".Gamer.Activity.RulsActivity">
 
     <ImageView
         android:id="@+id/ic_menu"

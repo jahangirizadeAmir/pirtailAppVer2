@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Gamer.Activity.FaqActivity"
+    android:background="@drawable/simple_red_bg">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_30">
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/sampleHeader"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <RelativeLayout
+                            android:background="@android:color/white"
+                            android:layout_height="48dp"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="سوال یک"
+                                android:layout_alignParentRight="true"
+                                android:textColor="#3E3E3E" />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="120dp"
+                                android:layout_width="wrap_content"
+                                android:text="نحوه استخراج الماس"
+                                android:textColor="#AAA"
+                                android:layout_centerInParent="true"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:adjustViewBounds="true"
+                                android:id="@+id/headerIndicator"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_width="wrap_content"
+                                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                        </RelativeLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        app:expansion_expanded="false"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/container"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:background="#EEE"
+                                android:gravity="center"
+                                android:layout_height="100dp"
+                                android:layout_width="match_parent"
+                                android:padding="@dimen/padding_10"
+                                android:text="با رفع کردن نیاز‌های روزانت از کسب و کارهایی که روی نقشه بازی نشون داده شدن میتونی تعداد الماس رو بدست بیاری، اما برای اینکه بتونی رایگان تفریح کنی و جایزه‌های نقدی رو ببری باید توی بازی‌ها و چالش‌هایی که برگزار میشه شرکت کنی." />
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#CCC" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/sampleHeader"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <RelativeLayout
+                            android:background="@android:color/white"
+                            android:layout_height="48dp"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="سوال یک"
+                                android:layout_alignParentRight="true"
+                                android:textColor="#3E3E3E" />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="120dp"
+                                android:layout_width="wrap_content"
+                                android:text="نحوه استخراج الماس"
+                                android:textColor="#AAA"
+                                android:layout_centerInParent="true"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:adjustViewBounds="true"
+                                android:id="@+id/headerIndicator"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_width="wrap_content"
+                                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                        </RelativeLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        app:expansion_expanded="false"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/container"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:background="#EEE"
+                                android:gravity="center"
+                                android:layout_height="100dp"
+                                android:layout_width="match_parent"
+                                android:padding="@dimen/padding_10"
+                                android:text="با رفع کردن نیاز‌های روزانت از کسب و کارهایی که روی نقشه بازی نشون داده شدن میتونی تعداد الماس رو بدست بیاری، اما برای اینکه بتونی رایگان تفریح کنی و جایزه‌های نقدی رو ببری باید توی بازی‌ها و چالش‌هایی که برگزار میشه شرکت کنی." />
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#CCC" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/sampleHeader"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <RelativeLayout
+                            android:background="@android:color/white"
+                            android:layout_height="48dp"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="سوال یک"
+                                android:layout_alignParentRight="true"
+                                android:textColor="#3E3E3E" />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="120dp"
+                                android:layout_width="wrap_content"
+                                android:text="نحوه استخراج الماس"
+                                android:textColor="#AAA"
+                                android:layout_centerInParent="true"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:adjustViewBounds="true"
+                                android:id="@+id/headerIndicator"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_width="wrap_content"
+                                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                        </RelativeLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        app:expansion_expanded="false"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/container"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:background="#EEE"
+                                android:gravity="center"
+                                android:layout_height="100dp"
+                                android:layout_width="match_parent"
+                                android:padding="@dimen/padding_10"
+                                android:text="با رفع کردن نیاز‌های روزانت از کسب و کارهایی که روی نقشه بازی نشون داده شدن میتونی تعداد الماس رو بدست بیاری، اما برای اینکه بتونی رایگان تفریح کنی و جایزه‌های نقدی رو ببری باید توی بازی‌ها و چالش‌هایی که برگزار میشه شرکت کنی." />
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#CCC" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/sampleHeader"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <RelativeLayout
+                            android:background="@android:color/white"
+                            android:layout_height="48dp"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="سوال یک"
+                                android:layout_alignParentRight="true"
+                                android:textColor="#3E3E3E" />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="120dp"
+                                android:layout_width="wrap_content"
+                                android:text="نحوه استخراج الماس"
+                                android:textColor="#AAA"
+                                android:layout_centerInParent="true"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:adjustViewBounds="true"
+                                android:id="@+id/headerIndicator"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_width="wrap_content"
+                                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                        </RelativeLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        app:expansion_expanded="false"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/container"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:background="#EEE"
+                                android:gravity="center"
+                                android:layout_height="100dp"
+                                android:layout_width="match_parent"
+                                android:padding="@dimen/padding_10"
+                                android:text="با رفع کردن نیاز‌های روزانت از کسب و کارهایی که روی نقشه بازی نشون داده شدن میتونی تعداد الماس رو بدست بیاری، اما برای اینکه بتونی رایگان تفریح کنی و جایزه‌های نقدی رو ببری باید توی بازی‌ها و چالش‌هایی که برگزار میشه شرکت کنی." />
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#CCC" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:android="http://schemas.android.com/apk/res/android">
+
+                    <com.github.florent37.expansionpanel.ExpansionHeader
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:id="@+id/sampleHeader"
+                        app:expansion_headerIndicator="@id/headerIndicator"
+                        app:expansion_layout="@id/expansionLayout"
+                        app:expansion_toggleOnClick="true">
+
+                        <RelativeLayout
+                            android:background="@android:color/white"
+                            android:layout_height="48dp"
+                            android:layout_width="match_parent"
+                            android:paddingLeft="16dp"
+                            android:paddingRight="16dp">
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_width="wrap_content"
+                                android:text="سوال یک"
+                                android:layout_alignParentRight="true"
+                                android:textColor="#3E3E3E" />
+
+                            <TextView
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="120dp"
+                                android:layout_width="wrap_content"
+                                android:text="نحوه استخراج الماس"
+                                android:textColor="#AAA"
+                                android:layout_centerInParent="true"/>
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:adjustViewBounds="true"
+                                android:id="@+id/headerIndicator"
+                                android:layout_alignParentLeft="true"
+                                android:layout_centerVertical="true"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="16dp"
+                                android:layout_width="wrap_content"
+                                app:srcCompat="@drawable/ic_expansion_header_indicator_grey_24dp" />
+
+                        </RelativeLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionHeader>
+
+                    <com.github.florent37.expansionpanel.ExpansionLayout
+                        android:id="@+id/expansionLayout"
+                        app:expansion_expanded="false"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <LinearLayout
+                            android:id="@+id/container"
+                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:background="#EEE"
+                                android:gravity="center"
+                                android:layout_height="100dp"
+                                android:layout_width="match_parent"
+                                android:padding="@dimen/padding_10"
+                                android:text="با رفع کردن نیاز‌های روزانت از کسب و کارهایی که روی نقشه بازی نشون داده شدن میتونی تعداد الماس رو بدست بیاری، اما برای اینکه بتونی رایگان تفریح کنی و جایزه‌های نقدی رو ببری باید توی بازی‌ها و چالش‌هایی که برگزار میشه شرکت کنی." />
+
+                        </LinearLayout>
+
+                    </com.github.florent37.expansionpanel.ExpansionLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#CCC" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

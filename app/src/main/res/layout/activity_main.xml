@@ -195,24 +195,18 @@
         android:paddingTop="5dp"
         android:paddingRight="10dp"
         android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_menu" />
+        app:srcCompat="@drawable/ic_menu"
+        android:paddingEnd="10dp"
+        android:paddingStart="5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
         android:id="@+id/ic_cup"
         android:layout_width="37dp"
         android:layout_height="47dp"
-        android:layout_alignBottom="@+id/parent2"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginStart="187dp"
-        android:layout_marginLeft="187dp"
-        android:layout_marginTop="691dp"
-        android:layout_marginEnd="187dp"
-        android:layout_marginRight="187dp"
-        android:layout_marginBottom="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
         android:background="@drawable/back_cup_icon"
         android:padding="6dp"
         app:srcCompat="@drawable/ic_cup2" />

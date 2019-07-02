@@ -28,7 +28,7 @@
         <RelativeLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:paddingRight="20dp"
             android:paddingEnd="20dp"
             android:paddingLeft="20dp"
@@ -45,6 +45,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text="تغییر نام کاربری"
+                android:textColor="@android:color/white"
+                android:padding="2dp"
                 android:gravity="center" />
 
         </RelativeLayout>
@@ -112,7 +114,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:paddingEnd="70dp"
             android:paddingStart="70dp"
             android:layout_marginTop="2dp"
@@ -127,9 +129,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="رمز عبور فعلی"
-                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="text"
                 android:gravity="center"
-                android:padding="3dp"
+                android:paddingStart="@dimen/edittext_paddaing"
+                android:paddingEnd="@dimen/edittext_paddaing"
                 android:background="@android:color/transparent"/>
 
         </RelativeLayout>
@@ -137,7 +141,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:paddingEnd="75dp"
             android:paddingStart="75dp"
             android:layout_marginTop="2dp"
@@ -152,11 +156,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="رمز جدید (حداقل ۶ کاراکتر)"
-                android:maxLines="1"
-                android:padding="3dp"
+                android:singleLine="true"
                 android:gravity="center"
-                android:paddingStart="5dp"
-                android:paddingEnd="5dp"
+                android:paddingStart="@dimen/edittext_paddaing"
+                android:paddingEnd="@dimen/edittext_paddaing"
                 android:background="@android:color/transparent"/>
 
         </RelativeLayout>
@@ -164,7 +167,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.2"
             android:paddingEnd="75dp"
             android:paddingStart="75dp"
             android:layout_marginTop="2dp"
@@ -179,9 +182,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="تکرار رمز جدید"
-                android:maxLines="1"
+                android:singleLine="true"
                 android:gravity="center"
-                android:padding="3dp"
+                android:paddingStart="@dimen/edittext_paddaing"
+                android:paddingEnd="@dimen/edittext_paddaing"
                 android:background="@android:color/transparent"/>
 
         </RelativeLayout>
@@ -189,7 +193,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.3"
             android:paddingEnd="80dp"
             android:paddingStart="80dp"
             android:layout_marginTop="10dp"
@@ -213,7 +217,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="بازیابی رمز عبور فقط از طریق ایمیل امکان پذیر است•  "
+            android:text="•   بازیابی رمز عبور فقط از طریق ایمیل امکان پذیر است"
             android:textColor="@android:color/white"
             android:gravity="center"/>
 
@@ -246,6 +250,9 @@
                 android:maxLines="1"
                 android:gravity="center"
                 android:paddingTop="30dp"
+                android:singleLine="true"
+                android:paddingStart="@dimen/edittext_paddaing"
+                android:paddingEnd="@dimen/edittext_paddaing"
                 android:background="@android:color/transparent"/>
 
         </RelativeLayout>
@@ -253,7 +260,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.3"
             android:paddingEnd="80dp"
             android:paddingStart="80dp"
             android:layout_marginBottom="@dimen/margin_50"

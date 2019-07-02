@@ -2,4 +2,14 @@
 <resources>
     <dimen name="margin_30">30dp</dimen>
     <dimen name="margin_50">50dp</dimen>
+    <dimen name="edittext_paddaing">40dp</dimen>
+    <dimen name="margin_90">90dp</dimen>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="radius_100">100dp</dimen>
+    <dimen name="width_4">4dp</dimen>
+    <dimen name="width_100">100dp</dimen>
+    <dimen name="width_2">2dp</dimen>
+    <dimen name="padding_30">30dp</dimen>
+    <dimen name="padding_230">230dp</dimen>
+
 </resources>

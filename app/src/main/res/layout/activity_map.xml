@@ -8,7 +8,6 @@
     tools:context=".Gamer.Activity.MapActivity"
     xmlns:mapbox="http://schemas.android.com/apk/res-auto">
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView2"
         android:layout_width="match_parent"

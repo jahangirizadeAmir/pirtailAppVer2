@@ -37,12 +37,11 @@
                 android:src="@drawable/white_rectangular_box"/>
 
             <EditText
-                android:id="@+id/edt_conformation_code"
+                android:id="@+id/edt_phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="کد ارسال شده را وارد کنید"
+                android:hint="+98"
                 android:maxLines="1"
-                android:gravity="center"
                 android:paddingStart="@dimen/edittext_paddaing"
                 android:paddingEnd="@dimen/edittext_paddaing"
                 android:background="@android:color/transparent"/>
@@ -55,13 +54,14 @@
             android:layout_weight="1"
             android:layout_margin="@dimen/margin_50">
 
-            <ImageView
+
+        <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/green_rectangular_box"/>
 
             <Button
-                android:id="@+id/btn_send"
+                android:id="@+id/btn_conformation"
                 android:layout_width="300dp"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
@@ -71,29 +71,6 @@
                 android:layout_centerInParent="true"/>
 
         </RelativeLayout>
-
-        <TextView
-            android:id="@+id/txt_counter"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:text="00:00:00"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:layout_weight="0.3"/>
-
-        <TextView
-            android:id="@+id/txt_resend_code"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:text="ارسال مجدد"
-            android:textColor="@android:color/black"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:layout_weight="0.3"/>
 
     </LinearLayout>
 

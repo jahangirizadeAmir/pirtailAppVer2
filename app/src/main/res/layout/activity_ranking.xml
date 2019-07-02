@@ -1,10 +1,409 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Gamer.Activity.RankingActivity"
-    android:background="@drawable/simple_red_bg">
+    android:id="@+id/parent"
+    android:background="@drawable/simple_orange_bg"
+    tools:context=".Gamer.Activity.RankingActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/ic_menu"
+        android:layout_width="37dp"
+        android:layout_height="47dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="14dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        app:srcCompat="@drawable/ic_back" />
+
+    <LinearLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:paddingBottom="@dimen/padding_10">
+
+            <ImageView
+                android:id="@+id/frame_user_info"
+                android:layout_width="242dp"
+                android:layout_height="100dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="end"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="-3dp"
+                android:layout_marginRight="-3dp"
+                android:src="@drawable/red_frame"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txt_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/frame_user_info"
+                android:layout_alignRight="@+id/frame_user_info"
+                android:layout_alignBottom="@+id/frame_user_info"
+                android:layout_marginEnd="123dp"
+                android:layout_marginRight="125dp"
+                android:layout_marginBottom="39dp"
+                android:text="@string/username"
+                android:textColor="#E01D59" />
+
+            <TextView
+                android:id="@+id/txt_user_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/frame_user_info"
+                android:layout_alignRight="@+id/frame_user_info"
+                android:textSize="12sp"
+                android:layout_alignBottom="@+id/frame_user_info"
+                android:layout_marginEnd="134dp"
+                android:layout_marginRight="134dp"
+                android:layout_marginBottom="22dp"
+                android:text="@string/user_rank"
+                android:textColor="#fff" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frame_layout"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingRight="@dimen/padding_30"
+            android:paddingLeft="@dimen/padding_30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="افتخارات"
+                    android:gravity="center"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:background="@drawable/shape_left" />
+
+                <View
+                    android:layout_width="@dimen/width_4"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="آمار"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/shape_right" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="15"
+            android:paddingRight="@dimen/padding_30"
+            android:paddingLeft="@dimen/padding_30"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/width_2"
+                        android:layout_weight="2"
+                        android:background="@android:color/white"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="الماس"
+                        android:singleLine="true"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="20"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/width_2"
+                        android:layout_weight="1"
+                        android:background="@android:color/white"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="تعداد چالش‌های انجام شده"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:layout_weight="1.3"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/width_2"
+                        android:layout_weight="2"
+                        android:background="@android:color/white"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:text="چالش‌های برنده شده"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:layout_weight="1.6"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/width_2"
+                        android:layout_weight="2"
+                        android:background="@android:color/white"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="‌الماس‌های استخراج شده"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:layout_weight="1.6"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/width_2"
+                        android:layout_weight="2"
+                        android:background="@android:color/white"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:text="تعداد خرید از فروشگاه‌ها"
+                        android:singleLine="true"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="100"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/width_2"
+                        android:layout_weight="2"
+                        android:background="@android:color/white"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:singleLine="true"
+                        android:text="الماس‌های استخراج شده"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingTop="@dimen/padding_10"
+                    android:paddingBottom="@dimen/padding_10"
+                    android:paddingStart="@dimen/padding_230"
+                    android:paddingEnd="0dp"
+                    android:orientation="horizontal"
+                    android:layout_gravity="end"
+                    android:paddingLeft="@dimen/padding_30"
+                    android:paddingRight="0dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="رتبه"
+                        android:gravity="center"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/shape_both" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <SeekBar
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.github.florent37.androidslidr.Slidr
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:slidr_regions_centerText="false"
+                        app:slidr_region_leftColor="#4CAF50"
+                        android:padding="@dimen/padding_10"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

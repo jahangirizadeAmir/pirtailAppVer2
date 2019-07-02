@@ -72,7 +72,7 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
 
         defineObjects();
 
-        //  get the static data from PhoneEnter
+        //  get the static data from PhoneEnterActivity
         requestQueue = Volley.newRequestQueue(EnterCodeActivity.this);
         intent=getIntent();
         submit=intent.getBooleanExtra("submit", true);
