@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_shop_shape">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_0"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="@dimen/width_0"
+                android:layout_height="match_parent"
+                android:backgroundTint="#E01D59"
+                android:gravity="center"
+                android:inputType="text"
+                android:layout_weight="6"
+                android:text="asdasdasfadsfwdffwf"
+                android:textColor="@android:color/black"
+                android:paddingStart="65dp"
+                android:paddingEnd="@dimen/padding_100"
+                android:singleLine="true"
+                android:paddingRight="@dimen/padding_100"
+                android:paddingLeft="65dp"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:layout_width="@dimen/width_0"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_search"
+                android:padding="@dimen/padding_10"
+                android:layout_weight="1.5"/>
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_0"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="مواد خوراکی"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/padding_10"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="مواد خوراکی"
+                    android:padding="@dimen/padding_10"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="مواد خوراکی"
+                    android:padding="@dimen/padding_10"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="مواد خوراکی"
+                    android:padding="@dimen/padding_10"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="مواد خوراکی"
+                    android:padding="@dimen/padding_10"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="مواد خوراکی"
+                    android:padding="@dimen/padding_10"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/text_shape"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:layout_marginRight="@dimen/margin_10"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_0"
+                android:layout_weight="5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/padding_15"
+                    android:paddingBottom="@dimen/padding_15"
+                    android:paddingEnd="@dimen/padding_10"
+                    android:paddingStart="@dimen/padding_10"
+                    android:layout_marginTop="@dimen/margin_10">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_margin="@dimen/margin_15">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/text_shape"
+                            android:text="رستوران"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_hamberger_san"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_15" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_margin="@dimen/margin_15">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/text_shape"
+                            android:text="رستوران"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_hamberger_san"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_15" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_margin="@dimen/margin_15">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/text_shape"
+                            android:text="رستوران"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_hamberger_san"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_15" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_margin="@dimen/margin_15">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/text_shape"
+                            android:text="رستوران"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_hamberger_san"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_15" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_margin="@dimen/margin_15">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/text_shape"
+                            android:text="رستوران"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_hamberger_san"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_15" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_margin="@dimen/margin_15">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/text_shape"
+                            android:text="رستوران"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_hamberger_san"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_15" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_margin="@dimen/margin_15">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/text_shape"
+                            android:text="رستوران"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_hamberger_san"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_15" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_margin="@dimen/margin_15">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/text_shape"
+                            android:text="رستوران"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_hamberger_san"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_15" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_50"
+                        android:layout_margin="@dimen/margin_15">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textColor="@android:color/white"
+                            android:background="@drawable/text_shape"
+                            android:text="رستوران"
+                            android:gravity="center" />
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            app:srcCompat="@drawable/ic_hamberger_san"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginEnd="@dimen/margin_15"
+                            android:layout_marginRight="@dimen/margin_15" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

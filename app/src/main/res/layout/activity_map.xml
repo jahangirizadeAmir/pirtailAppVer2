@@ -59,6 +59,7 @@
                         android:background="@drawable/back_menu_icon"
                         android:paddingLeft="5dp"
                         android:paddingTop="5dp"
+                        android:layout_marginLeft="0dp"
                         android:layout_weight="0"
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
@@ -137,12 +138,33 @@
                         android:layout_gravity="center"
                         android:layout_weight="1" />
 
-                    <ImageView
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:src="@drawable/bg_serach"
-                        android:padding="@dimen/padding_10"/>
+                        android:layout_weight="2">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/bg_serach"
+                            android:padding="@dimen/padding_10"/>
+
+                        <EditText
+                            android:id="@+id/search_bar"
+                            android:layout_width="match_parent"
+                            android:background="@android:color/transparent"
+                            android:layout_height="match_parent"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:textColor="@android:color/black"
+                            android:paddingStart="65dp"
+                            android:paddingEnd="@dimen/padding_100"
+                            android:singleLine="true"
+                            android:paddingRight="@dimen/padding_100"
+                            android:paddingLeft="65dp" />
+
+                    </RelativeLayout>
 
                     <ImageView
                         android:id="@+id/ic_cup"
