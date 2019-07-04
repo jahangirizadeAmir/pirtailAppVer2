@@ -9,7 +9,7 @@
     tools:context=".Gamer.Activity.SettingsActivity">
 
     <ImageView
-        android:id="@+id/ic_menu"
+        android:id="@+id/ic_back"
         android:layout_width="37dp"
         android:layout_height="47dp"
         android:layout_alignParentTop="true"

@@ -106,7 +106,7 @@
                     android:text="افتخارات"
                     android:gravity="center"
                     android:textColor="@android:color/holo_red_dark"
-                    android:background="@drawable/shape_left" />
+                    android:background="@drawable/shape_left_off" />
 
                 <View
                     android:layout_width="@dimen/width_4"
@@ -120,7 +120,7 @@
                     android:text="آمار"
                     android:gravity="center"
                     android:textColor="@android:color/white"
-                    android:background="@drawable/shape_right" />
+                    android:background="@drawable/shape_right_on" />
 
             </LinearLayout>
 
