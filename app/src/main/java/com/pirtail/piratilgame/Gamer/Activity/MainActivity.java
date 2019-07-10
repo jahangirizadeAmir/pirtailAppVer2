@@ -2,12 +2,14 @@ package com.pirtail.piratilgame.Gamer.Activity;
 
 import android.content.Context;
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.pirtail.piratilgame.Gamer.Fragment.FragmentUserFrame;
 import com.pirtail.piratilgame.R;
 
 import butterknife.BindView;
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         defineObjects();
 
+
+
     }
 
     private void defineObjects() {
@@ -51,6 +55,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         img_search.setOnClickListener(this);
         ic_cup.setOnClickListener(this);
         ic_menu.setOnClickListener(this);
+
+        String username = getResources().getString(R.string.username);
+        String rank = getResources().getString(R.string.user_rank);
+        String dimound_count = getResources().getString(R.string.txt_dimound_count);
+        int image = R.drawable.green_bg_empty;
+        int charracter = R.drawable.ic_user_charracter;
+
+        FragmentUserFrame fragmentUserFrame = FragmentUserFrame.newInstance(username, rank, dimound_count, image, charracter);
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.fragment_container, fragmentUserFrame)
+                .commit();
 
     }
 
@@ -61,24 +77,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.img_challenge :
-                intent= new Intent(MainActivity.this, View_pager.class);
+        switch (view.getId()) {
+            case R.id.img_challenge:
+                intent = new Intent(MainActivity.this, View_pager.class);
                 startActivity(intent);
 //                finish();
                 break;
             case R.id.img_search:
-                intent= new Intent(MainActivity.this, MapActivity.class);
+                intent = new Intent(MainActivity.this, MapActivity.class);
                 startActivity(intent);
 //                finish();
                 break;
             case R.id.ic_cup:
-                intent= new Intent(MainActivity.this, RankingActivity.class);
+                intent = new Intent(MainActivity.this, RankingActivity.class);
                 startActivity(intent);
 //                finish();
                 break;
             case R.id.ic_menu:
-                intent= new Intent(MainActivity.this, MenuActivity.class);
+                intent = new Intent(MainActivity.this, MenuActivity.class);
                 startActivity(intent);
 //                finish();
                 break;

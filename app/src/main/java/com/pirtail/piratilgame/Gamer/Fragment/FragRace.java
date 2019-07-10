@@ -32,8 +32,6 @@ public class FragRace extends Fragment {
 //    }
 public static FragRace newInstance(String title, String countGeml, int img, int BackG) {
 
-
-
     FragRace fragment = new FragRace();
     Title = title;
     countGem = countGeml;
@@ -44,6 +42,18 @@ public static FragRace newInstance(String title, String countGeml, int img, int 
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.race_frag, null, false);
+
+        String username = getResources().getString(R.string.username);
+        String rank = getResources().getString(R.string.user_rank);
+        String dimound_count = getResources().getString(R.string.txt_dimound_count);
+        int image = R.drawable.yellow_bg_empty;
+        int charracter = R.drawable.ic_user_charracter;
+
+//        FragmentUserFrame fragmentUserFrame = FragmentUserFrame.newInstance(username, rank, dimound_count, image, charracter);
+//        getChildFragmentManager()
+//                .beginTransaction()
+//                .add(R.id.fragment_container, fragmentUserFrame)
+//                .commit();
 
         ImageView imageView = (ImageView) view.findViewById(R.id.img_challenge);
         imageView.setImageResource(Img);

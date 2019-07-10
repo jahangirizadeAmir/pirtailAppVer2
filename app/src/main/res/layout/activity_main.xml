@@ -35,7 +35,16 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1">
+                android:layout_weight="1.5">
+
+                <FrameLayout
+                    android:id="@+id/fragment_container"
+                    android:name="com.example.fragmenttraining.Fragments.FragmentTest"
+                    android:layout_width="200dp"
+                    android:layout_height="150dp"
+                    android:paddingTop="@dimen/padding_15"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
 
                 <ImageView
                     android:id="@+id/frame_user_info"
@@ -43,6 +52,7 @@
                     android:layout_height="100dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
+                    android:visibility="invisible"
                     android:layout_gravity="end"
                     android:layout_marginStart="105dp"
                     android:layout_marginLeft="105dp"
@@ -62,6 +72,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="bottom|end"
+                    android:visibility="invisible"
                     android:layout_alignEnd="@+id/frame_user_info"
                     android:layout_alignRight="@+id/frame_user_info"
                     android:layout_alignBottom="@+id/frame_user_info"
@@ -76,6 +87,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="bottom|end"
+                    android:visibility="invisible"
                     android:layout_alignEnd="@+id/frame_user_info"
                     android:layout_alignRight="@+id/frame_user_info"
                     android:layout_alignBottom="@+id/frame_user_info"
@@ -85,7 +97,6 @@
                     android:text="150"
                     android:textColor="#fff"
                     android:textSize="12sp" />
-
 
             </RelativeLayout>
 
@@ -152,7 +163,7 @@
                 android:visibility="visible"
                 android:layout_alignLeft="@+id/parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
@@ -160,43 +171,27 @@
                         android:id="@+id/img_search"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="8dp"
-                        android:layout_marginLeft="8dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
-                        android:src="@drawable/green_rectangular_box"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        android:src="@drawable/green_rectangular_box" />
 
                     <TextView
                         android:id="@+id/txt_find_dimound"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginEnd="8dp"
-                        android:layout_marginRight="8dp"
-                        android:layout_marginBottom="8dp"
                         android:gravity="center"
                         android:text="جستجوی الماس"
-                        android:textColor="@android:color/white"
-                        app:layout_constraintBottom_toBottomOf="@+id/img_search"
-                        app:layout_constraintEnd_toEndOf="@+id/img_search"
-                        app:layout_constraintStart_toStartOf="@+id/img_search"
-                        app:layout_constraintTop_toTopOf="@+id/img_search" />
+                        android:textColor="@android:color/white" />
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </RelativeLayout>
 
             </LinearLayout>
-
 
         </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
+
+
 
     <ImageView
         android:id="@+id/ic_menu"

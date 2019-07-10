@@ -9,6 +9,39 @@
     tools:context=".Gamer.Activity.MenuActivity"
     android:orientation="vertical">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:gravity="center|start">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="37dp"
+            android:layout_height="47dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            app:srcCompat="@drawable/ic_back"
+            android:paddingEnd="10dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingRight="@dimen/padding_50"
+        android:paddingLeft="@dimen/padding_50"
+        android:paddingBottom="@dimen/padding_15"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -20,16 +53,6 @@
                     android:id="@+id/img_user_profile"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginLeft="0dp"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginEnd="0dp"
-                    android:layout_marginRight="0dp"
                     android:src="@drawable/menu_boxes_bg" />
 
                 <TextView
@@ -225,5 +248,9 @@
                     android:gravity="center"/>
 
             </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

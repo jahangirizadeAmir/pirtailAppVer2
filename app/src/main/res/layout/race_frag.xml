@@ -4,16 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="0sp"
-    android:layout_margin="0sp"
     android:background="@drawable/green_bg"
     android:orientation="vertical"
     tools:context=".Gamer.Activity.View_pager">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:gravity="center|start">
+
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="37dp"
+            android:layout_height="47dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp"
+            app:srcCompat="@drawable/ic_back"
+            android:paddingEnd="10dp" />
+
+    </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
+            android:layout_weight=".3">
 
             <ImageView
                 android:id="@+id/frame_user_info"
@@ -21,17 +37,7 @@
                 android:layout_height="100dp"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_gravity="end"
-                android:layout_marginTop="24dp"
-                android:layout_marginEnd="-3dp"
-                android:layout_marginRight="-3dp"
-                android:src="@drawable/red_frame"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                android:src="@drawable/red_frame" />
 
             <TextView
                 android:id="@+id/txt_username"
@@ -60,68 +66,61 @@
                 android:text="@string/user_rank"
                 android:textColor="#fff" />
 
-
         </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:gravity="center">
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:gravity="end|center"
+        android:padding="@dimen/padding_30">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
             <ImageView
                 android:id="@+id/img_challenge"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginLeft="32dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginRight="32dp"
-                android:layout_marginBottom="32dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 app:srcCompat="@drawable/yellow_bowling" />
 
             <TextView
                 android:id="@+id/textChallenge"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="70dp"
-                android:layout_marginLeft="70dp"
-                android:layout_marginEnd="70dp"
-                android:layout_marginRight="70dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="sample race name"
                 android:textColor="#E01D59"
-                android:textSize="25sp"
-                app:layout_constraintBottom_toBottomOf="@+id/img_challenge"
-                app:layout_constraintEnd_toEndOf="@+id/img_challenge"
-                app:layout_constraintStart_toStartOf="@+id/img_challenge"
-                app:layout_constraintTop_toTopOf="@+id/img_challenge"
-                app:layout_constraintVertical_bias="0.501" />
+                android:textSize="@dimen/fontsize18"
+                android:layout_margin="@dimen/margin70"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:paddingEnd="30dp"
-        android:paddingStart="30dp"
-        android:paddingBottom="50dp">
+        android:layout_weight=".25"
+        android:layout_gravity="center"
+        android:gravity="end|center"
+        android:padding="20dp">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -129,33 +128,19 @@
                 android:id="@+id/img_search"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:src="@drawable/white_box"/>
 
             <TextView
                 android:id="@+id/txt_Entrance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:text="sample Entrance text"
                 android:textColor="#FFB600"
-                app:layout_constraintBottom_toBottomOf="@+id/img_search"
-                app:layout_constraintEnd_toEndOf="@+id/img_search"
-                app:layout_constraintStart_toStartOf="@+id/img_search"
-                app:layout_constraintTop_toTopOf="@+id/img_search" />
+                android:gravity="center"/>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </RelativeLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 

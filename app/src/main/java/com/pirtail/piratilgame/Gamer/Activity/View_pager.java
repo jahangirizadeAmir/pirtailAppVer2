@@ -17,7 +17,7 @@ public class View_pager extends AppCompatActivity {
 
     ViewPager viewPager;
 
-    ArrayList<Fragment> fragments;
+    ArrayList<FragRace> fragments;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -26,7 +26,7 @@ public class View_pager extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.ViewPager);
         fragments = new ArrayList<>();
         fragments.add(FragRace.newInstance("GameOne","400",R.drawable.img_bowling_game,R.drawable.green_bg));
-        fragments.add(FragRace.newInstance("GameOne","400",R.drawable.img_bowling_game,R.drawable.red_bg));
+        fragments.add(FragRace.newInstance("GameTwo","400",R.drawable.img_bowling_game,R.drawable.red_bg));
         fragments.add(FragRace.newInstance("GameOne","400",R.drawable.img_bowling_game,R.drawable.red_bg));
         fragments.add(FragRace.newInstance("GameOne","400",R.drawable.img_bowling_game,R.drawable.green_bg));
         fragments.add(FragRace.newInstance("GameOne","400",R.drawable.img_bowling_game,R.drawable.red_bg));

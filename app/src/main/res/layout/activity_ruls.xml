@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/parent"
+    android:orientation="vertical"
     android:background="@drawable/simple_red_bg"
     tools:context=".Gamer.Activity.RulsActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:gravity="center">
+
     <ImageView
-        android:id="@+id/ic_menu"
+        android:id="@+id/ic_back"
         android:layout_width="37dp"
         android:layout_height="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="5dp"
         android:paddingTop="5dp"
         android:paddingRight="10dp"
         android:paddingBottom="5dp"
-        app:srcCompat="@drawable/ic_back" />
+        app:srcCompat="@drawable/ic_back"
+        android:paddingEnd="10dp" />
 
     <RelativeLayout
         android:id="@+id/layout"
         android:layout_width="125dp"
         android:layout_height="47dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="5dp"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:gravity="center">
 
         <ImageView
@@ -43,14 +47,28 @@
             android:textColor="#BF0000"
             android:gravity="center" />
 
+        </RelativeLayout>
+
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingStart="@dimen/padding_50"
+        android:paddingEnd="@dimen/padding_50"
+        android:paddingLeft="@dimen/padding_50"
+        android:paddingRight="@dimen/padding_50">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/layout"
-        android:paddingTop="@dimen/margin_30"
-        android:paddingBottom="@dimen/margin_50">
+        android:layout_height="match_parent">
 
         <ImageView
             android:layout_width="match_parent"
@@ -60,10 +78,10 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/margin_90"
-            android:layout_marginRight="@dimen/margin_90"
-            android:layout_marginTop="@dimen/margin_30"
-            android:layout_marginBottom="@dimen/margin_30">
+            android:paddingStart="@dimen/padding_30"
+            android:paddingEnd="@dimen/padding_30"
+            android:paddingBottom="@dimen/padding_50"
+            android:paddingTop="@dimen/margin_50">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -82,4 +100,8 @@
 
     </RelativeLayout>
 
-</RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -31,6 +31,8 @@ public class MenuActivity extends AppCompatActivity {
     ImageView imgRules;
     @BindView(R.id.img_about_us)
     ImageView imgAboutUs;
+    @BindView(R.id.ic_back)
+    ImageView icBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,7 @@ public class MenuActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.img_user_profile, R.id.img_settings, R.id.img_report_bug, R.id.img_follow_us, R.id.img_faq, R.id.img_rules, R.id.img_about_us})
+    @OnClick({R.id.img_user_profile, R.id.img_settings, R.id.img_report_bug, R.id.img_follow_us, R.id.img_faq, R.id.img_rules, R.id.img_about_us, R.id.ic_back})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.img_user_profile:
@@ -77,6 +79,9 @@ public class MenuActivity extends AppCompatActivity {
                 intent = new Intent(MenuActivity.this, AboutUsActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.ic_back:
+                onBackPressed();
         }
     }
+
 }

@@ -19,11 +19,11 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="height" value="72" />
-                            <entry key="outputName" value="ic_hamberger_san" />
+                            <entry key="height" value="206" />
+                            <entry key="outputName" value="ic_girl_charracter" />
                             <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="$PROJECT_DIR$/../../UI/New Ui/NS/SVG/ic_hamberger_san.svg" />
-                            <entry key="width" value="88" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/../../UI/New Ui/NS/4x/SVG/girl_charracter.svg" />
+                            <entry key="width" value="147" />
                           </map>
                         </option>
                       </PersistentState>
