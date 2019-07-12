@@ -17,13 +17,15 @@ import com.pirtail.piratilgame.Gamer.Activity.MenuActivity;
 import com.pirtail.piratilgame.Gamer.Activity.ProfileActivity;
 import com.pirtail.piratilgame.R;
 
+import java.util.Random;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class FragmentUserFrame extends Fragment {
 
     static String username;
-    static String rank;
+//    static String rank;
     static int image;
     Bundle arguments;
 
@@ -41,12 +43,12 @@ public class FragmentUserFrame extends Fragment {
 //    @BindView(R.id.txt_user_rank)
 //    TextView txtUserRank;
 
-    public static FragmentUserFrame newInstance(String username, String rank, String dimound_count, int image, int charracter) {
+    public static FragmentUserFrame newInstance(String username/*, String rank*/, String dimound_count, int image, int charracter) {
 
         Bundle args = new Bundle();
 
         args.putString(USERNAME_KEY, username);
-        args.putString(RANK_KEY, rank);
+//        args.putString(RANK_KEY, rank);
         args.putString(DIMOUND_COUNT, dimound_count);
         args.putInt(IMAGE_KEY, image);
         args.putInt(CHARRACTER_KEY, charracter);
@@ -70,7 +72,7 @@ public class FragmentUserFrame extends Fragment {
         View view = inflater.inflate(R.layout.fragment_fragment_user_frame, container, false);
 
         String username = arguments.getString(USERNAME_KEY);
-        String rank = arguments.getString(RANK_KEY);
+//        String rank = arguments.getString(RANK_KEY);
         String dimound_count = arguments.getString(DIMOUND_COUNT);
         int bg_image = arguments.getInt(IMAGE_KEY);
         int charracte_image = arguments.getInt(CHARRACTER_KEY);
@@ -82,7 +84,7 @@ public class FragmentUserFrame extends Fragment {
         ImageView img_charracter = (ImageView) view.findViewById(R.id.img_charracter);
 
         txtUsername.setText(username);
-        txtUserRank.setText(rank);
+//        txtUserRank.setText(rank);
         txt_dimound_count.setText(dimound_count);
         imgFrame.setImageResource(bg_image);
         img_charracter.setImageResource(charracte_image);

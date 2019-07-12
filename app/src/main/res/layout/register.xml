@@ -9,9 +9,172 @@
     tools:context=".Gamer.Activity.Register"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/padding_50">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_logo" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".6"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:paddingEnd="70dp"
+                android:paddingStart="70dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/white_rectangular_box"/>
+
+                <EditText
+                    android:id="@+id/edt_name_family"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@string/txt_name_family"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fontsize14"
+                    android:inputType="text"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/edittext_paddaing"
+                    android:paddingEnd="@dimen/edittext_paddaing"
+                    android:background="@android:color/transparent"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.2"
+                android:paddingEnd="70dp"
+                android:paddingStart="70dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/white_rectangular_box"/>
+
+                <EditText
+                    android:id="@+id/reagent_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="شماره معرف"
+                    android:singleLine="true"
+                    android:textSize="@dimen/fontsize14"
+                    android:inputType="text"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/edittext_paddaing"
+                    android:paddingEnd="@dimen/edittext_paddaing"
+                    android:background="@android:color/transparent"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            android:paddingStart="@dimen/padding_50"
+            android:paddingEnd="@dimen/padding_50">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbtn_men"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="آقا"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbtn_women"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="خانم"
+                    android:layout_weight="1"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="20dp"/>
+
+            </RadioGroup>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".5"
+            android:paddingStart="@dimen/padding_50"
+            android:paddingEnd="@dimen/padding_50">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:src="@drawable/green_rectangular_box"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="تغییر رمز"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textColor="@android:color/white"/>
+
+            <Button
+                android:id="@+id/btn_conformation"
+                android:background="@drawable/green_rectangular_box"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="تایید"
+                android:textColor="#FFF"
+                android:padding="30dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -36,17 +199,6 @@
                 android:layout_height="wrap_content">
 
                 <EditText
-                    android:id="@+id/edt_username"
-                    android:hint="نام کاربری"
-                    android:paddingLeft="30dp"
-                    android:paddingRight="30dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="80dp"
-                    android:background="@drawable/white_rectangular_box"
-                    android:layout_marginBottom="20dp" />
-
-                <EditText
-                    android:id="@+id/edt_name_family"
                     android:hint="نام و نام خانوادگی"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
@@ -56,7 +208,6 @@
                     android:layout_marginBottom="20dp" />
 
                 <EditText
-                    android:id="@+id/reagent_phone_number"
                     android:hint="شماره معرف"
                     android:paddingLeft="30dp"
                     android:paddingRight="30dp"
@@ -72,7 +223,6 @@
                     android:layout_margin="10dp">
 
                     <RadioButton
-                        android:id="@+id/rbtn_men"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="آقا"
@@ -81,7 +231,6 @@
                         android:paddingRight="20dp"/>
 
                     <RadioButton
-                        android:id="@+id/rbtn_women"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="خانم"
@@ -92,7 +241,6 @@
                 </RadioGroup>
 
                 <Button
-                    android:id="@+id/btn_conformation"
                     android:background="@drawable/green_rectangular_box"
                     android:layout_width="wrap_content"
                     android:layout_height="100dp"

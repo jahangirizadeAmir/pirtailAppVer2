@@ -35,7 +35,7 @@
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
-                android:layout_weight="1.5">
+                android:layout_weight="1">
 
                 <FrameLayout
                     android:id="@+id/fragment_container"
@@ -155,7 +155,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_alignStart="@+id/parent"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
                 android:gravity="center"
                 android:paddingStart="30dp"
                 android:paddingEnd="30dp"
@@ -165,7 +166,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
                     <ImageView
                         android:id="@+id/img_search"
@@ -183,6 +185,26 @@
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5">
+
+                    <ImageView
+                        android:id="@+id/img_add_dimound"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/menu_boxes_bg" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="وارد کردن الماس"
+                        android:textColor="@color/color_pink_light" />
+
+                </RelativeLayout>
+
             </LinearLayout>
 
         </LinearLayout>
@@ -190,8 +212,6 @@
         </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
-
-
 
     <ImageView
         android:id="@+id/ic_menu"

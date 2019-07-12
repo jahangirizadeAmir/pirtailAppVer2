@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin_30">30dp</dimen>
+    <dimen name="margin_20">14dp</dimen>
     <dimen name="margin_50">50dp</dimen>
     <dimen name="edittext_paddaing">40dp</dimen>
     <dimen name="margin_90">90dp</dimen>
@@ -35,5 +36,8 @@
     <dimen name="padding18">18dp</dimen>
     <dimen name="padding35">35dp</dimen>
     <dimen name="padding27">27dp</dimen>
+    <dimen name="height60">60dp</dimen>
+    <dimen name="width120">120dp</dimen>
+    <dimen name="width50">50dp</dimen>
 
 </resources>

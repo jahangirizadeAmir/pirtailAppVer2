@@ -76,20 +76,16 @@ public class PhoneEnterActivity extends AppCompatActivity {
             progressDialog.show();
 
             vollay_Request = new vollayRequest();
-            vollay_Request.requester(stringStringHashMap, PhoneEnterActivity.this, "submitUser", new ServerCallback() {
+            vollay_Request.requester(stringStringHashMap, PhoneEnterActivity.this, "sendCode", new ServerCallback() {
                 @Override
                 public void onSuccess(JSONObject result) {
                     progressDialog.dismiss();
-                    try {
+
                         intent = new Intent(PhoneEnterActivity.this, EnterCodeActivity.class);
                         intent.putExtra("mobile", getEdt_phone_number.getText().toString().trim());
-                        intent.putExtra("type",result.getString("type"));
                         startActivity(intent);
                         finish();
 
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
                 }
             });
 

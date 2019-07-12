@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -19,11 +20,16 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.pirtail.piratilgame.Class.CustomToast;
+import com.pirtail.piratilgame.Class.vollayRequest;
 import com.pirtail.piratilgame.R;
+import com.pirtail.piratilgame.ServerCallback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
@@ -33,10 +39,10 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class Register extends AppCompatActivity {
 
-    EditText edt_username, edt_phone_number, edt_name_family, reagent_phone_number;
+    EditText edt_phone_number, edt_name_family, reagent_phone_number;
     RadioButton rbtn_men, rbtn_women;
-    Button btn_send;
-    String username, regenantPhoneNumber,reagent , nameFamily, gender, token, mobile;
+    Button btn_conformation;
+    String username, regenantPhoneNumber,reagent , nameFamily, gender, token, mobile, encryptedToken;
     StringRequest stringRequest;
     RequestQueue requestQueue;
     SharedPreferences sharedPreferences;
@@ -56,9 +62,22 @@ public class Register extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(getApplicationContext());
 
         //sending data to server process
-        btn_send.setOnClickListener(new View.OnClickListener() {
+        btn_conformation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                regenantPhoneNumber = reagent_phone_number.getText().toString().trim();
+                nameFamily = edt_name_family.getText().toString().trim();
+
+                Toast.makeText(Register.this, ""+nameFamily, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Register.this, ""+reagent, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Register.this, ""+regenantPhoneNumber, Toast.LENGTH_SHORT).show();
+
+                if (rbtn_men.isChecked()){
+                    gender="1";
+                }else {
+                    gender="0";
+                }
 
                 // Empty the name and family ERROR
                 if (nameFamily.equals("")){
@@ -85,74 +104,39 @@ public class Register extends AppCompatActivity {
                     customToast.getToast().show();
                 }
                 else {
-                    stringRequest = new StringRequest(
-                            Request.Method.POST,
-                            "http://piratil.com/game/request/complateSubmit.php",
-                            new Response.Listener<String>() {
-                                @Override
-                                public void onResponse(String response) {
+                    stringStringHashMap = new HashMap<>();
+//                            stringStringHashMap.put("appVersion","1");
+//                            stringStringHashMap.put("device","android");
+                    stringStringHashMap.put("mobile",mobile);
+                    stringStringHashMap.put("token", token);
+                    stringStringHashMap.put("name", edt_name_family.getText().toString().trim());
+                    stringStringHashMap.put("invitedMobile", reagent_phone_number.getText().toString().trim());
+                    stringStringHashMap.put("gender", gender);
 
-                                    try {
-                                        jsonObject=new JSONObject(response);
-
-                                        //app version ERROR
-                                        if (!jsonObject.getBoolean("version")) {
-                                            builder = new AlertDialog.Builder(Register.this);
-                                            builder.setTitle("خطایی پیش آمده");
-                                            builder.setMessage("نسخه جدید را دانلود کنید");
-                                            builder.setCancelable(false);
-                                            builder.show();
-                                        }else {
-
-                                            //Server error message
-                                            if (jsonObject.getBoolean("error")){
-                                                customToast = new CustomToast(getApplicationContext(), jsonObject.getString(getResources().getString(R.string.MSG_ERROR)), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Bottom);
-                                                customToast.getToast().show();
-                                            }else {
-                                                //Required server information from the user
-                                                sharedPreferences = getSharedPreferences("token", MODE_PRIVATE);
-                                                sharedPreferences.edit().putBoolean("login", true).apply();
-                                                sharedPreferences.edit().putString("token", token).apply();
-                                                sharedPreferences.edit().putString("mobile", mobile).apply();
-                                                intent = new Intent(Register.this, MainActivity.class);
-                                                startActivity(intent);
-                                                finish();
-                                            }
-
-                                        }
-
-                                    } catch (JSONException e) {
-                                        e.printStackTrace();
-                                    }
-
-
-                                }
-                            }, new Response.ErrorListener() {
+                    vollayRequest vollayRequest = new vollayRequest();
+                    vollayRequest.requester(stringStringHashMap, Register.this, "submit", new ServerCallback() {
                         @Override
-                        public void onErrorResponse(VolleyError error) {
+                        public void onSuccess(JSONObject result) throws JSONException {
+
+
+                            Intent intent = new Intent(Register.this, MainActivity.class);
+                            //SAVE TO SHEARED
+
+                            String name = nameFamily;
+                            String dimound_count = "0";
+//                            gender = gender;
+
+                            sharedPreferences = getSharedPreferences("userInfo", MODE_PRIVATE);
+                            sharedPreferences.edit().putString("name", name).apply();
+                            sharedPreferences.edit().putString("dimound_count", dimound_count).apply();
+                            sharedPreferences.edit().putString("gender", gender).apply();
+
+                            startActivity(intent);
+                            finish();
 
                         }
-                    }
-                    ){
+                    });
 
-                        //Required server information from the user
-                        @Override
-                        protected Map<String, String> getParams() throws AuthFailureError {
-                            stringStringHashMap = new HashMap<>();
-                            stringStringHashMap.put("appVersion","1");
-                            stringStringHashMap.put("device","android");
-                            stringStringHashMap.put("mobile",mobile);
-                            stringStringHashMap.put("token", token+getSaltString());
-                            stringStringHashMap.put("name", edt_name_family.getText().toString().trim());
-                            stringStringHashMap.put("invitedMobile", reagent_phone_number.getText().toString().trim());
-                            stringStringHashMap.put("gender", gender);
-                            return  stringStringHashMap;
-                        }
-
-
-                    };
-
-                    requestQueue.add(stringRequest);
 
                 }
             }
@@ -161,40 +145,16 @@ public class Register extends AppCompatActivity {
     }
 
     private void defineObjects() {
-        edt_username=(EditText)findViewById(R.id.edt_username);
         edt_phone_number=(EditText)findViewById(R.id.edt_phone_number);
-        btn_send=(Button) findViewById(R.id.btn_conformation);
+        btn_conformation =(Button) findViewById(R.id.btn_conformation);
         reagent_phone_number=(EditText)findViewById(R.id.reagent_phone_number);
         edt_name_family=(EditText)findViewById(R.id.edt_name_family);
         rbtn_men=(RadioButton) findViewById(R.id.rbtn_men);
         rbtn_women=(RadioButton) findViewById(R.id.rbtn_women);
 
-        username = edt_username.getText().toString().trim();
-        regenantPhoneNumber = reagent_phone_number.getText().toString().trim();
-        reagent = reagent_phone_number.getText().toString().trim();
-        nameFamily = edt_name_family.getText().toString().trim();
-        if (rbtn_men.isChecked()){
-            gender="1";
-        }else {
-            gender="0";
-        }
-
-        sharedPreferences = getSharedPreferences("token", MODE_PRIVATE);
+        sharedPreferences = getSharedPreferences("Token", MODE_PRIVATE);
         token = sharedPreferences.getString("token", null);
         mobile = sharedPreferences.getString("mobile", null);
-    }
-
-    //encrypting token
-    protected String getSaltString() {
-        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-        StringBuilder salt = new StringBuilder();
-        Random rnd = new Random();
-        while (salt.length() < 6) { // length of the random string.
-            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-            salt.append(SALTCHARS.charAt(index));
-        }
-        String saltStr = salt.toString();
-        return saltStr;
 
     }
 

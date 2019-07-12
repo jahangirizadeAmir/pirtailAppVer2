@@ -41,8 +41,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="کد ارسال شده را وارد کنید"
-                android:maxLines="1"
+                android:singleLine="true"
                 android:gravity="center"
+                android:inputType="number"
                 android:paddingStart="@dimen/edittext_paddaing"
                 android:paddingEnd="@dimen/edittext_paddaing"
                 android:background="@android:color/transparent"/>

@@ -50,6 +50,12 @@ public class vollayRequest {
                         try {
                             JSONObject jsonObject = new JSONObject(response);
                             versionController versionController = new versionController(jsonObject.getBoolean("version"),context);
+                            boolean error = jsonObject.getBoolean("error");
+                            if(error){
+                                CustomToast customToast = new CustomToast(context,jsonObject.getString("MSG"),CustomToast.danger,CustomToast.Bottom);
+                                customToast.getToast().show();
+                                return;
+                            }
                             serverCallback.onSuccess(jsonObject);
                         } catch (JSONException e) {
                             e.printStackTrace();

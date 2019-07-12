@@ -105,6 +105,7 @@
                     android:id="@+id/txt_user_rank"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:visibility="gone"
                     android:text="150"
                     android:textSize="8sp"
                     android:gravity="center"

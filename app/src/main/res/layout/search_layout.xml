@@ -8,8 +8,8 @@
     android:background="@drawable/bg_shop_shape">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
         android:orientation="vertical"
         android:padding="@dimen/padding_10">
 
@@ -23,12 +23,11 @@
             <EditText
                 android:id="@+id/search_bar"
                 android:layout_width="@dimen/width_0"
-                android:layout_height="match_parent"
+                android:layout_height="@dimen/height60"
                 android:backgroundTint="#E01D59"
                 android:gravity="center"
                 android:inputType="text"
                 android:layout_weight="6"
-                android:text="asdasdasfadsfwdffwf"
                 android:textColor="@android:color/black"
                 android:paddingStart="65dp"
                 android:paddingEnd="@dimen/padding_100"
@@ -39,9 +38,10 @@
 
             <ImageView
                 android:layout_width="@dimen/width_0"
-                android:layout_height="match_parent"
+                android:layout_height="@dimen/height60"
                 app:srcCompat="@drawable/ic_search"
                 android:padding="@dimen/padding_10"
+                android:layout_gravity="center"
                 android:layout_weight="1.5"/>
 
         </LinearLayout>
@@ -53,76 +53,58 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="مواد خوراکی"
                     android:layout_gravity="center"
-                    android:padding="@dimen/padding_10"
                     android:textColor="@android:color/white"
                     android:background="@drawable/text_shape"
                     android:gravity="center"
+                    android:padding="@dimen/padding11"
                     android:layout_marginLeft="@dimen/margin_10"
                     android:layout_marginRight="@dimen/margin_10"/>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="مواد خوراکی"
-                    android:padding="@dimen/padding_10"
+                    android:layout_gravity="center"
                     android:textColor="@android:color/white"
                     android:background="@drawable/text_shape"
                     android:gravity="center"
+                    android:padding="@dimen/padding11"
                     android:layout_marginLeft="@dimen/margin_10"
                     android:layout_marginRight="@dimen/margin_10"/>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="مواد خوراکی"
-                    android:padding="@dimen/padding_10"
+                    android:layout_gravity="center"
                     android:textColor="@android:color/white"
                     android:background="@drawable/text_shape"
                     android:gravity="center"
+                    android:padding="@dimen/padding11"
                     android:layout_marginLeft="@dimen/margin_10"
                     android:layout_marginRight="@dimen/margin_10"/>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:text="مواد خوراکی"
-                    android:padding="@dimen/padding_10"
+                    android:layout_gravity="center"
                     android:textColor="@android:color/white"
                     android:background="@drawable/text_shape"
                     android:gravity="center"
+                    android:padding="@dimen/padding11"
                     android:layout_marginLeft="@dimen/margin_10"
                     android:layout_marginRight="@dimen/margin_10"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="مواد خوراکی"
-                    android:padding="@dimen/padding_10"
-                    android:textColor="@android:color/white"
-                    android:background="@drawable/text_shape"
-                    android:gravity="center"
-                    android:layout_marginLeft="@dimen/margin_10"
-                    android:layout_marginRight="@dimen/margin_10"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="مواد خوراکی"
-                    android:padding="@dimen/padding_10"
-                    android:textColor="@android:color/white"
-                    android:background="@drawable/text_shape"
-                    android:gravity="center"
-                    android:layout_marginLeft="@dimen/margin_10"
-                    android:layout_marginRight="@dimen/margin_10"/>
 
             </LinearLayout>
         </HorizontalScrollView>

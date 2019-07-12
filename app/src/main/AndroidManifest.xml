@@ -6,6 +6,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Coarse location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
 
     <application
         android:name=".Class.Font"
@@ -17,24 +19,34 @@
         android:supportsRtl="true"
         android:windowSoftInputMode="stateHidden|adjustPan"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".Gamer.Activity.FaqActivity"
-            android:theme="@style/AppThemeRed"/>
+        <activity android:name=".Gamer.Activity.SplashScreen"
+            android:theme="@style/AppThemeGreen">
 
-        <activity android:name=".Gamer.Activity.RulsActivity"
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".Gamer.Activity.FaqActivity"
             android:theme="@style/AppThemeRed" />
-
-        <activity android:name=".Gamer.Activity.AboutUsActivity"
+        <activity
+            android:name=".Gamer.Activity.RulsActivity"
             android:theme="@style/AppThemeRed" />
-
-        <activity android:name=".Gamer.Activity.SocialNetworksActivity"
+        <activity
+            android:name=".Gamer.Activity.AboutUsActivity"
             android:theme="@style/AppThemeRed" />
-
-        <activity android:name=".Gamer.Activity.ReportActivity"
+        <activity
+            android:name=".Gamer.Activity.SocialNetworksActivity"
             android:theme="@style/AppThemeRed" />
-
-        <activity android:name=".Gamer.Activity.SettingsActivity"
+        <activity
+            android:name=".Gamer.Activity.ReportActivity"
             android:theme="@style/AppThemeRed" />
-
+        <activity
+            android:name=".Gamer.Activity.SettingsActivity"
+            android:theme="@style/AppThemeRed" />
         <activity
             android:name=".Gamer.Activity.ProfileActivity"
             android:theme="@style/AppThemeRed" />
@@ -50,7 +62,8 @@
             android:theme="@style/AppThemeWhite" />
         <activity
             android:name=".Gamer.Activity.EnterCodeActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeWhite" />
         <activity
             android:name=".Gamer.Activity.View_pager"
             android:screenOrientation="portrait"
@@ -58,13 +71,7 @@
         <activity
             android:name=".Gamer.Activity.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeWhite">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppThemeWhite"></activity>
         <activity
             android:name=".Gamer.Activity.Register"
             android:screenOrientation="portrait"
@@ -72,7 +79,9 @@
         <activity
             android:name=".Gamer.Activity.PhoneEnterActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeWhite" />
+            android:theme="@style/AppThemeWhite">
+
+        </activity>
     </application>
 
 </manifest>

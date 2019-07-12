@@ -29,8 +29,12 @@ import com.pirtail.piratilgame.ServerCallback;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import butterknife.BindView;
@@ -51,7 +55,7 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
     @BindView(R.id.txt_resend_code)
             TextView getTxt_resend_code;
 
-    String conformationCode, mobile, type;
+    String conformationCode, mobile, token;
     Intent intent;
     RequestQueue requestQueue;
     Boolean submit, dataComplete;
@@ -75,10 +79,7 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
         //  get the static data from PhoneEnterActivity
         requestQueue = Volley.newRequestQueue(EnterCodeActivity.this);
         intent=getIntent();
-        submit=intent.getBooleanExtra("submit", true);
-        dataComplete=intent.getBooleanExtra("dataComplete", false);
         mobile=intent.getStringExtra("mobile");
-        type=intent.getStringExtra("type");
 
         countDownTimer = new CountDownTimer(60000, 1000) {
             @SuppressLint("DefaultLocale")
@@ -128,7 +129,6 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
                     //Required server information from the user
                     stringStringHashMap= new HashMap<>();
                     stringStringHashMap.put("mobile", mobile);
-                    stringStringHashMap.put("type", type);
                     stringStringHashMap.put("code", conformationCode);
 
                     //Server error message
@@ -138,7 +138,7 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
                     progressDialog.show();
 
                     vollay_Request= new vollayRequest();
-                    vollay_Request.requester(stringStringHashMap, EnterCodeActivity.this, "checkCode.php", new ServerCallback() {
+                    vollay_Request.requester(stringStringHashMap, EnterCodeActivity.this, "checkCode", new ServerCallback() {
                         @Override
                         public void onSuccess(JSONObject result) throws JSONException {
                             progressDialog.dismiss();
@@ -146,12 +146,33 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
                                 customToast=new CustomToast(getApplicationContext(), getResources().getString(R.string.MSG_ERROR), com.pirtail.piratilgame.Class.CustomToast.danger, com.pirtail.piratilgame.Class.CustomToast.Top);
                                 customToast.getToast().show();
                             }else {
+
+                                token = result.getString("token");
+                                token= MD5.getMd5(token)+getSaltString();
+
                                 sharedPreferences = getSharedPreferences("Token", MODE_PRIVATE);
                                 sharedPreferences.edit().putString("mobile",mobile).apply();
-                                sharedPreferences.edit().putString("token",result.getString("token")).apply();
-                                intent = new Intent(EnterCodeActivity.this, Register.class);
-                                startActivity(intent);
-                                finish();
+                                sharedPreferences.edit().putString("token",token).apply();
+
+                                if(result.getBoolean("goToSubmit")){
+                                    intent = new Intent(EnterCodeActivity.this, Register.class);
+                                    startActivity(intent);
+                                    finish();
+                                }else{
+
+                                    String name = result.getString("name");
+                                    String dimound_count = result.getString("countGem");
+                                    String gender = result.getString("gender");
+
+                                    sharedPreferences = getSharedPreferences("userInfo", MODE_PRIVATE);
+                                    sharedPreferences.edit().putString("name", name).apply();
+                                    sharedPreferences.edit().putString("dimound_count", dimound_count).apply();
+                                    sharedPreferences.edit().putString("gender", gender).apply();
+
+                                    intent = new Intent(EnterCodeActivity.this, MainActivity.class);
+                                    startActivity(intent);
+                                    finish();
+                                }
 
                                 getTxt_counter.setEnabled(false);
                             }
@@ -172,7 +193,7 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
 
                 stringRequest = new StringRequest(
                         Request.Method.POST,
-                        "http://piratil.com/game/request/submitUser.php",
+                        "http://piratil.com/game/request/submitUser",
                         response -> {
 
                             progressDialog.dismiss();
@@ -185,6 +206,9 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
                                     builder.setMessage("نسخه جدید را دانلود کنید");
                                     builder.setCancelable(false);
                                     builder.show();
+
+
+
                                 } else {
 
                                     customToast=new CustomToast(
@@ -203,11 +227,8 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
                             }
 
                         },
-                        new Response.ErrorListener() {
-                            @Override
-                            public void onErrorResponse(VolleyError error) {
+                        error -> {
 
-                            }
                         }
                 ) {
                     @Override
@@ -230,4 +251,58 @@ public class EnterCodeActivity extends AppCompatActivity implements View.OnClick
                 break;
         }
     }
+
+    //encrypting token
+    protected String getSaltString() {
+        String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        StringBuilder salt = new StringBuilder();
+        Random rnd = new Random();
+        while (salt.length() < 6) { // length of the random string.
+            int index = (int) (rnd.nextFloat() * SALTCHARS.length());
+            salt.append(SALTCHARS.charAt(index));
+        }
+        String saltStr = salt.toString();
+        return saltStr;
+
+    }
+
+    // Java program to calculate MD5 hash value
+    public static class MD5 {
+        public static String getMd5(String input)
+        {
+            try {
+
+                // Static getInstance method is called with hashing MD5
+                MessageDigest md = MessageDigest.getInstance("MD5");
+
+                // digest() method is called to calculate message digest
+                //  of an input digest() return array of byte
+                byte[] messageDigest = md.digest(input.getBytes());
+
+                // Convert byte array into signum representation
+                BigInteger no = new BigInteger(1, messageDigest);
+
+                // Convert message digest into hex value
+                String hashtext = no.toString(16);
+                while (hashtext.length() < 32) {
+                    hashtext = "0" + hashtext;
+                }
+                return hashtext;
+            }
+
+            // For specifying wrong message digest algorithms
+            catch (NoSuchAlgorithmException e) {
+                throw new RuntimeException(e);
+            }
+        }
+
+        // Driver code
+        public static void main(String args[]) throws NoSuchAlgorithmException
+        {
+            String s = "GeeksForGeeks";
+            System.out.println("Your HashCode Generated by MD5 is: " + getMd5(s));
+
+        }
+    }
+
 }

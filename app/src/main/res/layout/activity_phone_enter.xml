@@ -41,7 +41,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="+98"
-                android:maxLines="1"
+                android:singleLine="true"
+                android:inputType="phone"
                 android:paddingStart="@dimen/edittext_paddaing"
                 android:paddingEnd="@dimen/edittext_paddaing"
                 android:background="@android:color/transparent"/>

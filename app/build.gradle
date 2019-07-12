@@ -37,8 +37,14 @@ dependencies {
             {
                 transitive = true
             }
+    implementation(
+            'com.mapbox.mapboxsdk:mapbox-android-sdk:7.3.2'
+    ) {
+        exclude module: 'support-core-utils'
+    }
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     implementation 'com.github.florent37:expansionpanel:1.2.2'
     implementation 'com.github.florent37:android-slidr:1.0.3'
+    implementation 'com.squareup.picasso:picasso:1.0.0'
 }
